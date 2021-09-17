@@ -1,0 +1,89 @@
+<div id="admincp_base"></div>
+<div id="flavor_manager">
+	<div class="fm_save">
+		<i class="fa fa-spin fa-circle-o-notch"></i>
+		<i class="fa fa-check"></i>
+	</div>
+	<div class="fm_sub_menu">
+		<div class="fm_sub_menu_title">
+			<i class="fa fa-chevron-left"></i><span></span>
+			<button>{{ _p('Save') }}</button>
+		</div>
+		<div class="fm_sub_menu_content"></div>
+		<div class="ace_editor_holder">
+			<div class="ace_editor" data-ace-mode="html" data-ace-save="{{ url('/flavors/manage', {id: flavor.id}) }}" data-onstart="flavor_start" data-onend="flavor_end"></div>
+		</div>
+	</div>
+	<div class="fm_menu">
+		<div class="fm_menu_title"><i class="fa fa-diamond" onclick="window.location.href = '{{ url('/admincp/theme/') }}';"></i>{{ flavor.name }}</div>
+		<div class="fm_menu_content">
+			<div class="image_load theme_icon" data-src="{{ flavor.icon }}">
+				{% if theme.icon is empty %}
+					<div class="fm_uploader">
+						<span><i class="fa fa-upload"></i></span>
+						<input type="file" class="ajax_upload" value="Upload" name="logo" accept="image/png" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'icon'}) }}" data-onstart="flavor_start">
+					</div>
+				{% endif %}
+			</div>
+
+			{% if flavor.id == 'bootstrap' %}
+			<div class="message" style="font-size:12px;">
+				{{ _p('You are editing the Core bootstrap theme, which is reverted during a future upgrade. Create a new theme instead.') }}
+			</div>
+			{% endif %}
+
+			{% if has_upgrade %}
+				<div class="upgrade_product_holder">
+					<p>There is an update available for this product.</p>
+					<a href="{{ url(store.install_url) }}" class="skip">Update Now</a>
+				</div>
+			{% endif %}
+
+			<ul>
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'logo'}) }}"><i class="fa fa-photo"></i> {{ _p('Logo') }}<i class="fa fa-chevron-right"></i></a></li>
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'homepage'}) }}"><i class="fa fa-home"></i> {{ _p('Homepage') }}<i class="fa fa-chevron-right"></i></a></li>
+
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'default_photo'}) }}"><i class="fa fa-photo"></i> {{ _p('Default Photo') }}<i class="fa fa-chevron-right"></i></a></li>
+
+				{% if show_design %}
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'design'}) }}"><i class="fa fa-paint-brush"></i> {{ _p('Design') }}<i class="fa fa-chevron-right"></i></a></li>
+				{% endif %}
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'css'}) }}"><i class="fa fa-css3"></i> {{ _p('CSS') }}<i class="fa fa-chevron-right"></i></a></li>
+				{% if show_js %}
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'js'}) }}"><i class="fa fa-code"></i> {{ _p('Javascript') }}<i class="fa fa-chevron-right"></i></a></li>
+				{% endif %}
+				<li><a href="#" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'html'}) }}"><i class="fa fa-html5"></i> {{ _p('HTML') }}<i class="fa fa-chevron-right"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="fm_content" data-url="{{ url('/', {'force-flavor': flavor.id}) }}">
+		<div class="fm_loader"><i class="fa fa-spin fa-circle-o-notch"></i></div>
+	</div>
+	<div class="fm_responsive">
+		<span><i class="fa fa-chevron-up"></i></span>
+		<a href="#" data-type="desktop" class="active"><i class="fa fa-desktop"></i></a>
+		<a href="#" data-type="tablet"><i class="fa fa-tablet"></i></a>
+		<a href="#" data-type="mobile"><i class="fa fa-mobile"></i></a>
+		<div>
+			{% if flavor.id != active_flavor_id %}
+			<a href="{{ url('/flavors/manage', {id: flavor.id, type: 'default'}) }}" class="ajax" onclick="flavor_start();">{{ _p('Set as Default Theme') }}</a>
+			{% else %}
+			<a href="{{ url('/admincp/theme/bootstrap/rebuild') }}" class="ajax" onclick="flavor_start();">{{ _p('Rebuild Bootstrap Core') }}</a>
+			{% endif %}
+			<a href="{{ url('/flavors/manage', {id: flavor.id, type: 'export'}) }}" target="_blank">{{ _p('Export') }}</a>
+			{% if flavor.id == 'bootstrap' %}
+				<a href="{{ url('/flavors/manage', {id: flavor.id, type: 'revert'}) }}" class="popup">{{ _p('Revert') }}</a>
+			{% else %}
+			<a href="{{ url('/admincp/theme/merge') }}" class="popup">{{ _p('Merge Legacy') }}</a>
+			{% endif %}
+			{% if flavor.id != active_flavor_id and flavor.id != 'bootstrap' %}
+			<a href="{{ url('/flavors/manage', {id: flavor.id, type: 'delete'}) }}" class="delete popup">{{ _p('Delete') }}</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+<script>
+	if (top.location!= self.location) {
+		top.location = self.location.href;
+	}
+</script>

@@ -1,0 +1,99 @@
+/*=============================================
+=            CSS FOR BUTTON            =
+=============================================*/
+@btn-radius: 4px; 
+@btn-radius-lg: 6px; 
+@btn-radius-sm: 4px; 
+@btn-radius-xs: 2px; 
+
+.btn,
+.button{
+	border-radius: @btn-radius;
+	.transition(all 300ms ease);
+	.fz-lh(14px);
+	padding: 0px @grid-point+4 !important;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	border: none !important;
+	.h-5;
+	&.btn-round{
+		border-width: 0;
+	}
+}
+
+.btn-lg{
+	border-radius: @btn-radius-lg;
+	.fz-lh(16px);
+	.h-6;
+}
+
+.btn-sm{
+	border-radius: @btn-radius-sm;
+	.fz-lh(12px);
+	.h-4;
+}
+
+.btn-xs{
+	border-radius: @btn-radius-xs;
+	.fz-lh(11px);
+	.h-3;
+	.px-1 !important;
+}
+
+//Round
+.btn.btn-round{
+	border-radius: 32px;
+}
+
+//Disabled
+.btn.disabled, 
+.button.disabled, 
+.btn.button_not_active, 
+.button.button_not_active, 
+.btn[disabled], 
+.button[disabled], 
+fieldset[disabled] .btn, 
+fieldset[disabled] .button{
+	opacity: 0.35;
+	box-shadow:none;
+	pointer-events:none;
+	border: none;
+}
+
+.btn-default,
+.btn-default.btn-round{
+    color: @gray-darker;
+    background-color: #FFF;
+    border: 1px solid @gray-darker !important;
+
+	&:hover{
+		color: @brand-primary;
+   	 	background-color: #FFF;
+		border-color: @brand-primary !important;
+		box-shadow: 0px 4px 12px 0px fade(@brand-primary-dark, 30%);
+	}
+
+	&:focus,&:active{
+		background-color:@brand-primary-lightest !important;
+		color: @brand-primary-dark !important;
+		border-color: @brand-primary-lighter !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-primary-lighter, 50%);
+	}
+
+	&.disabled{
+		opacity: 1;	
+		border: none;
+		background: @gray-light;
+		color: #FFF;
+
+		&:hover{
+			border: none;
+			background: @gray-light;
+			color: #FFF;
+		}
+	}
+}
+
+/*=====  End of CSS FOR BUTTON  ======*/
+

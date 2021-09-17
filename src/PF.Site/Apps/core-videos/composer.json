@@ -1,0 +1,6 @@
+{
+	"require": {
+		"zencoder/zencoder-php": "*",
+		"tpyo/amazon-s3-php-class": "*"
+	}
+}

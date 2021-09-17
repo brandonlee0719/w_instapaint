@@ -1,0 +1,17 @@
+b492aced8cf42e41aaebc87b4eff8128 PF.Site/Apps/core-captcha/Ajax/Ajax.php
+3a6bfa9e782a82bdbbdfa22d89a6a71e PF.Site/Apps/core-captcha/app.lock
+b331a2b5aa4c29dd43a5dbda43cc4ed2 PF.Site/Apps/core-captcha/Block/Form.php
+a647d4e385f5e293e52fd325562b243d PF.Site/Apps/core-captcha/change-log.md
+f4c38db92ffa1990b8d385ec168bcd90 PF.Site/Apps/core-captcha/Controller/ImageController.php
+3423d2ee1b967abe734ee851cf34f70e PF.Site/Apps/core-captcha/hooks/validator.admincp_settings_captcha.php
+151b5a0f42dfdfc8d243506e59a321cc PF.Site/Apps/core-captcha/icon.png
+970faa9f6edad9011872b666d0ea874e PF.Site/Apps/core-captcha/Install.php
+4886159040f6d154ea5448360338fee5 PF.Site/Apps/core-captcha/Installation/Version/v453.php
+cd017751ec08f38b8d5a9f824f038410 PF.Site/Apps/core-captcha/installer.php
+d9ddedf944b05fe6cc8beaa079e76251 PF.Site/Apps/core-captcha/phrase.json
+76ccf31370d81ce01b62ff9ae3b801b6 PF.Site/Apps/core-captcha/README.md
+ac618df92fc6b720ef073a26848e07c3 PF.Site/Apps/core-captcha/Service/Callback.php
+b06af6693e5d0bfbe3756e1b4e21a727 PF.Site/Apps/core-captcha/Service/Captcha.php
+664e414b5aa2ded15d2a4e557a81e71c PF.Site/Apps/core-captcha/Service/Process.php
+a53ff276c87fec025784116ed41c4e66 PF.Site/Apps/core-captcha/start.php
+f664eea39dff150f4616b0034d48f875 PF.Site/Apps/core-captcha/views/block/form.html.php

@@ -1,0 +1,155 @@
+.notify(@font) {
+    .fa(@font);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 18px;
+    color: lighten(@header-color, 5%);
+}
+
+.notifications {
+    border-bottom: 1px darken(@nav-bg, 8%) solid;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+#holder_notify {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: transparent;
+
+    > ul {
+        > li {
+            > a, > a:hover {
+                background: transparent !important;
+            }
+
+            > a:hover {
+                background: darken(@header-bg, 1%) !important;
+            }
+        }
+
+        > li.is_active {
+
+            > a, > a:hover {
+                background: @brand-primary !important;
+            }
+        }
+    }
+}
+
+#holder_notify ul li:hover a:before {
+    color: lighten(@header-color, 40%);
+}
+
+#holder_notify ul li a.notification:before {
+    .notify('\f0f3');
+}
+
+#holder_notify ul li a.message:before {
+    .notify('\f01c');
+}
+
+#holder_notify ul li a.friend_notification:before {
+    .notify('\f234');
+}
+
+#holder_notify ul li.is_active a:before {
+    color: @brand-primary-color;
+}
+
+#holder_notify ul li div.holder_notify_drop {
+    border: 0;
+    background: @block-bg;
+    color: @block-color;
+    border-bottom: 4px darken(@block-bg, 12%) solid;
+    box-shadow: @box-shadow;
+}
+
+#holder_notify ul li div.holder_notify_drop a.holder_notify_drop_link, #holder_notify ul li div.holder_notify_drop a.holder_notify_drop_link:hover, .js_temp_friend_search_form_holder ul li a.holder_notify_drop_link, .js_temp_friend_search_form_holder ul li a.holder_notify_drop_link:hover {
+    .reset();
+    .button(darken(@block-bg, 4));
+    font-size: @font-size-base - 4 !important;
+    margin-top: 10px;
+}
+
+#request-panel-body {
+    li {
+        -webkit-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+        &.friend-request-accepted {
+            background-color: @alert-success-bg;
+            .info {
+                color: @alert-success-text !important;
+            }
+        }
+    }
+}
+
+.dropdown-panel .panel_actions {
+    font-size: 22px;
+    display: flex;
+    a {
+        padding: 0 20px 0 0;
+    }
+
+    > a {
+        align-items: center;
+        flex: 1;
+        display: block;
+        float: left;
+        background: @btn-gray-bg;
+        color: @btn-gray-color;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+
+        > i {
+            line-height: 40px;
+        }
+    }
+}
+
+div.notification_delete {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    font-size: @font-size-base;
+}
+
+[dir="ltr"]{
+    div.notification_delete{
+        right: 10px;
+    }
+
+}
+
+[dir="rtl"]{
+    div.notification_delete{
+        left: 10px;
+    }
+}
+
+.remove-btn-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    font-size: @font-size-base;
+}
+
+[dir="ltr"]{
+    .remove-btn-wrapper {
+        right: 5px;
+    }
+
+}
+
+[dir="rtl"]{
+    .remove-btn-wrapper {
+        left: 5px;
+    }
+}

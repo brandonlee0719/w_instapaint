@@ -1,0 +1,2 @@
+ALTER TABLE phpfox_instapaint_order
+ADD expedited_days int

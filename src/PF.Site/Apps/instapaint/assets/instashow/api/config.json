@@ -1,0 +1,15 @@
+{
+  "media_limit": 100,
+  "cache_time": 10800,
+  "allowed_usernames": "*",
+  "allowed_tags": "*",
+  "debug": "false",
+  "proxy": {
+    "server": "",
+    "user": "",
+    "password": ""
+  },
+  "client": {
+    "recursive": "false"
+  }
+}

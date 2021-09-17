@@ -1,0 +1,25 @@
+{
+    "name": "rainner/restful-php",
+    "description": "Parses the raw input body for all RESTful verbs (POST, PUT, DELETE, PATCH, etc.) and provides a better way for working with uploaded files.",
+    "type": "library",
+    "license": "MIT",
+	"keywords": ["php", "http", "upload", "files", "data", "restful", "input", "stream"],
+    "authors": [
+        {
+            "name": "Rainner Lins",
+            "email": "rainnerlins@gmail.com",
+			"role": "Developer"
+        }
+    ],
+    "require": {
+		"php": ">=5.4"
+	},
+	"require-dev": {
+
+	},
+	"autoload": {
+		"psr-4": {
+			"Restful\\": "src/Restful"
+		}
+	}
+}

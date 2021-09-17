@@ -1,0 +1,25 @@
+<upgrade>
+	<phpfox_update_settings>
+		<setting>
+			<group />
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>keep_files_in_server</var_name>
+			<phrase_var_name>setting_keep_files_in_server</phrase_var_name>
+			<ordering>15</ordering>
+			<version_id>3.5.0beta1</version_id>
+			<value>0</value>
+		</setting>
+	</phpfox_update_settings>
+	<reports>
+		<report>
+			<module_id>core</module_id>
+			<value>Test</value>
+		</report>
+		<report>
+			<module_id>core</module_id>
+			<value>test4</value>
+		</report>
+	</reports>
+</upgrade>

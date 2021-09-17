@@ -1,0 +1,60 @@
+<upgrade>
+	<settings>
+		<setting>
+			<group />
+			<module_id>user</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>split_full_name</var_name>
+			<phrase_var_name>setting_split_full_name</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>3.4.0beta1</version_id>
+			<value>0</value>
+		</setting>
+		<setting>
+			<group>registration</group>
+			<module_id>user</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>reenter_email_on_signup</var_name>
+			<phrase_var_name>setting_reenter_email_on_signup</phrase_var_name>
+			<ordering>19</ordering>
+			<version_id>3.4.0beta1</version_id>
+			<value>0</value>
+		</setting>
+		<setting>
+			<group />
+			<module_id>user</module_id>
+			<is_hidden>0</is_hidden>
+			<type>string</type>
+			<var_name>points_conversion_rate</var_name>
+			<phrase_var_name>setting_points_conversion_rate</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>3.4.0beta1</version_id>
+			<value />
+		</setting>
+		<setting>
+			<group />
+			<module_id>user</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>can_purchase_with_points</var_name>
+			<phrase_var_name>setting_can_purchase_with_points</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>3.4.0beta1</version_id>
+			<value>0</value>
+		</setting>
+		<setting>
+			<group />
+			<module_id>user</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>can_purchase_activity_points</var_name>
+			<phrase_var_name>setting_can_purchase_activity_points</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>3.4.0beta1</version_id>
+			<value>0</value>
+		</setting>
+	</settings>
+	<sql><![CDATA[a:1:{s:9:"ADD_FIELD";a:3:{s:11:"phpfox_user";a:1:{s:9:"feed_sort";a:4:{i:0;s:6:"TINT:1";i:1;s:1:"0";i:2;s:0:"";i:3;s:2:"NO";}}s:20:"phpfox_user_activity";a:1:{s:22:"activity_points_gifted";a:4:{i:0;s:7:"UINT:10";i:1;s:1:"0";i:2;s:0:"";i:3;s:2:"NO";}}s:17:"phpfox_user_field";a:3:{s:10:"first_name";a:4:{i:0;s:9:"VCHAR:255";i:1;N;i:2;s:0:"";i:3;s:3:"YES";}s:9:"last_name";a:4:{i:0;s:9:"VCHAR:255";i:1;N;i:2;s:0:"";i:3;s:3:"YES";}s:12:"landing_page";a:4:{i:0;s:8:"VCHAR:50";i:1;N;i:2;s:0:"";i:3;s:3:"YES";}}}}]]></sql>
+</upgrade>

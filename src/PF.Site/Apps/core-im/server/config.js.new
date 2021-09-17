@@ -1,0 +1,13 @@
+module.exports = {
+    port: 3000,
+    is_hosted: false,
+    chat_server_key: "",
+    secure: false, // use ssl ?
+    privateKey: "./private_key.key", // path to private key ?
+    cert: "./cert.crt",  // path to cert key ?
+    redis: {
+        host: '127.0.0.1',
+        port: 6379,
+        password: ''
+    }
+};

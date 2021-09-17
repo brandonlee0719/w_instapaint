@@ -1,0 +1,57 @@
+#attachment_manage {
+    .attachment_time_same_block {
+        & + .attachment_time_same_block {
+            margin-top: @block-content-padding;
+        }
+
+        > h3.time {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .content_attachment {
+            .clearfix();
+            .flex-wrapper-center();
+
+            padding: @block-content-padding 0;
+            border-bottom: 1px @line-gray-color solid;
+            color: @btn-gray-color;
+
+            .icon-wrapper {
+                margin-right: 10px;
+            }
+
+            .detail-info {
+                .flex-element();
+                overflow: hidden;
+                #using {
+                    .lines-base-1();
+                }
+            }
+
+            div#remove-wrapper {
+                margin-left: 10px;
+                span {
+                    padding: @block-content-padding*3/4;
+                    background: @btn-gray-bg;
+                    color: @btn-gray-color;
+                }
+            }
+
+            i.fa {
+                font-size: @font-size-base + 4;
+            }
+        }
+    }
+}
+
+.js_attachment_list {
+    padding: @block-content-padding 0;
+    max-height: 130px;
+    overflow-x: scroll;
+    .js_attachment_list_holder > .extra_info {
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+}

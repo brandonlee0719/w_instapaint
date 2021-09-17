@@ -1,0 +1,84 @@
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+#section-footer{
+	background: transparent;
+
+	.footer-holder{
+		background: transparent;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid @border-color;
+		margin-top: 60px;
+		.pt-3;
+		padding-bottom: @grid-point * 10;
+
+		@media (max-width: @screen-xs-max){
+			flex-direction: column;
+		}
+
+		.copyright{
+			font-size: 12px;
+			font-weight: bold;
+			color: @gray-dark;
+
+			a{
+				.transition(all 300ms ease);
+				
+				&:hover,
+				&:focus{
+					color: @gray-darker;
+				}
+
+				html[dir='rtl'] &{
+					display: inline-block;
+				}
+			}
+		}
+
+		.footer-menu{
+			font-size: 12px;
+			margin: 0;
+
+			li{
+				padding: 0;
+
+				& + li{
+					&:before{
+						content: "";
+						.square(3px);
+						background-color: @border-color;
+						padding: 0;
+						display: inline-block;
+						margin-left: 6px;
+						margin-right: @grid-point;
+						position: relative;
+						bottom: 2px;
+
+						html[dir='rtl'] &{
+							margin-left: @grid-point;
+							margin-right: 6px;
+						}
+					}
+				}
+
+				a{
+					color: @brand-primary;
+					.transition(all 300ms ease);
+
+					&:hover{
+						color: @brand-primary-dark;
+					}
+
+					&:before{
+						display: none;
+					}
+				}
+			}
+
+		}
+	}
+}
+/*=====  End of FOOTER  ======*/

@@ -1,0 +1,19 @@
+{% import '@Theme/macro/form.html' as Form %}
+<form method="post" action="{{ url('/admincp/theme/add') }}" class="ajax_post form">
+	<div class="js_box_actions">
+		<div>
+			{{ _p('import_file') }}
+			<span>{{ _p('themes') }}</span>
+		<span>
+			<input type="file" name="file" class="ajax_upload ajax_upload_actions" data-url="{{ url('/admincp/theme/add', {is_ajax_post: 'true'}) }}">
+		</span>
+		</div>
+	</div>
+	{{ Form.select({
+		name: 'clone',
+		title: _p('Clone'),
+		options: themes
+	}) }}
+	{{ Form.text('name', 'Name') }}
+	{{ Form.submit(_p('submit')) }}
+</form>

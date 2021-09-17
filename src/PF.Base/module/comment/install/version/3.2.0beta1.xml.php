@@ -1,0 +1,16 @@
+<upgrade>
+	<user_group_settings>
+		<setting>
+			<is_admin_setting>0</is_admin_setting>
+			<module_id>comment</module_id>
+			<type>boolean</type>
+			<admin>0</admin>
+			<user>0</user>
+			<guest>0</guest>
+			<staff>0</staff>
+			<module>comment</module>
+			<ordering>0</ordering>
+			<value>can_delete_comment_on_own_item</value>
+		</setting>
+	</user_group_settings>
+</upgrade>

@@ -1,0 +1,26 @@
+<upgrade>
+    <settings>
+        <setting>
+            <group>mail</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>drop</type>
+            <var_name>mail_smtp_secure</var_name>
+            <phrase_var_name>setting_mail_smtp_secure</phrase_var_name>
+            <ordering>10</ordering>
+            <version_id>4.5.3</version_id>
+            <value><![CDATA[a:2:{s:7:"default";s:4:"none";s:6:"values";a:3:{i:0;s:4:"none";i:1;s:3:"ssl";i:2;s:3:"tls";}}]]></value>
+        </setting>
+        <setting>
+            <group>mail</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>boolean</type>
+            <var_name>mail_queue</var_name>
+            <phrase_var_name>setting_mail_queue</phrase_var_name>
+            <ordering>5</ordering>
+            <version_id>4.5.3</version_id>
+            <value>0</value>
+        </setting>
+    </settings>
+</upgrade>

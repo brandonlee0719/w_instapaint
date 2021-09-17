@@ -1,0 +1,99 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "e6e4d858445fd162ebd8111c0d7a377a",
+    "content-hash": "1b5b7821b313b9f4f672c0088d122a26",
+    "packages": [
+        {
+            "name": "tpyo/amazon-s3-php-class",
+            "version": "v0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tpyo/amazon-s3-php-class.git",
+                "reference": "121318e65e857a994b22ffe0aa04a0c55e832bea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tpyo/amazon-s3-php-class/zipball/121318e65e857a994b22ffe0aa04a0c55e832bea",
+                "reference": "121318e65e857a994b22ffe0aa04a0c55e832bea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "S3.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Donovan Schönknecht",
+                    "email": "don@tpyo.net"
+                }
+            ],
+            "description": "A standalone Amazon S3 (REST) client for PHP 5.2.x using CURL that does not require PEAR.",
+            "homepage": "https://github.com/tpyo/amazon-s3-php-class",
+            "time": "2015-04-27 06:12:39"
+        },
+        {
+            "name": "zencoder/zencoder-php",
+            "version": "v2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zencoder/zencoder-php.git",
+                "reference": "e2604c441163c36fd27097d8d9a22fcdf16d1ee4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zencoder/zencoder-php/zipball/e2604c441163c36fd27097d8d9a22fcdf16d1ee4",
+                "reference": "e2604c441163c36fd27097d8d9a22fcdf16d1ee4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Services_Zencoder": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zencoder",
+                    "homepage": "http://zencoder.com"
+                }
+            ],
+            "description": "Zencoder integration library for PHP",
+            "homepage": "http://github.com/zencoder/zencoder-php",
+            "keywords": [
+                "cloud",
+                "encoder",
+                "encoding",
+                "zencoder"
+            ],
+            "time": "2014-07-29 22:43:19"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

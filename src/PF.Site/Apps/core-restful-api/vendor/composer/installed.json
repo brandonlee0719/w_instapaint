@@ -1,0 +1,111 @@
+[
+    {
+        "name": "rainner/restful-php",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rainner/restful-php.git",
+            "reference": "f23093b78803ff8e1ea792ab3b96772c968e5bbc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rainner/restful-php/zipball/f23093b78803ff8e1ea792ab3b96772c968e5bbc",
+            "reference": "f23093b78803ff8e1ea792ab3b96772c968e5bbc",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2016-01-06 02:16:32",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Restful\\": "src/Restful"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rainner Lins",
+                "email": "rainnerlins@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Parses the raw input body for all RESTful verbs (POST, PUT, DELETE, PATCH, etc.) and provides a better way for working with uploaded files.",
+        "keywords": [
+            "data",
+            "files",
+            "http",
+            "input",
+            "php",
+            "restful",
+            "stream",
+            "upload"
+        ]
+    },
+    {
+        "name": "bshaffer/oauth2-server-php",
+        "version": "v1.10.0",
+        "version_normalized": "1.10.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bshaffer/oauth2-server-php.git",
+            "reference": "d158878425392fe5a0cc34f15dbaf46315ae0ed9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bshaffer/oauth2-server-php/zipball/d158878425392fe5a0cc34f15dbaf46315ae0ed9",
+            "reference": "d158878425392fe5a0cc34f15dbaf46315ae0ed9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "aws/aws-sdk-php": "~2.8",
+            "firebase/php-jwt": "~2.2",
+            "mongodb/mongodb": "^1.1",
+            "phpunit/phpunit": "^4.0",
+            "predis/predis": "dev-master",
+            "thobbs/phpcassa": "dev-master"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "~2.8 is required to use DynamoDB storage",
+            "firebase/php-jwt": "~2.2 is required to use JWT features",
+            "mongodb/mongodb": "^1.1 is required to use MongoDB storage",
+            "predis/predis": "Required to use Redis storage",
+            "thobbs/phpcassa": "Required to use Cassandra storage"
+        },
+        "time": "2017-11-15 01:41:02",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "OAuth2": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Brent Shaffer",
+                "email": "bshafs@gmail.com",
+                "homepage": "http://brentertainment.com"
+            }
+        ],
+        "description": "OAuth2 Server for PHP",
+        "homepage": "http://github.com/bshaffer/oauth2-server-php",
+        "keywords": [
+            "auth",
+            "oauth",
+            "oauth2"
+        ]
+    }
+]

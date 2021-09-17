@@ -1,0 +1,16 @@
+<upgrade>
+	<user_group_settings>
+		<setting>
+			<is_admin_setting>0</is_admin_setting>
+			<module_id>feed</module_id>
+			<type>boolean</type>
+			<admin>true</admin>
+			<user>true</user>
+			<guest>true</guest>
+			<staff>true</staff>
+			<module>feed</module>
+			<ordering>0</ordering>
+			<value>can_view_feed</value>
+		</setting>
+	</user_group_settings>
+</upgrade>

@@ -1,0 +1,239 @@
+//General input form
+.form-control{
+    .h-5;
+    border-radius: 4px;
+    .p-1;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: @gray;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: @gray;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: @gray;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: @gray;
+    }
+
+    &:focus{
+        border-color: @gray-dark;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    &[type="file"]{
+        height: auto;
+    }
+}
+
+.form-group{
+    .mb-2;
+}
+
+//Input large size
+.input-lg{
+    .h-6;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.input-group-lg > .form-control, 
+.input-lg{
+    .h-6;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+//Input small size
+.input-sm,
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon{
+    .h-4;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+//Input,textarea disabled
+input.disabled, 
+textarea.disabled,
+input.disabled:hover{
+    background: @gray-lighter;
+    border-color: @gray-light;
+}
+
+
+//Input group
+.input-group{
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+
+    .form-control{
+        border-radius: inherit !important;
+        .pr-6;
+    }
+
+    .input-group-addon{
+        width: auto;
+        padding: 0;
+        .items-center;
+        color: @gray-dark;
+        height: auto;
+        .transition(all 300ms ease);
+        
+        &:first-child{
+            background: transparent;
+            border: none;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            padding-left: @grid-point+4;
+            padding-right: @grid-point+4;
+            font-size: 16px;
+            html[dir='rtl'] &{
+                    right: 0;
+                    left: auto;
+                }
+            & +  .form-control{
+                padding-left: @grid-point*4;
+                padding-right: @grid-point+4;
+
+                html[dir='rtl'] &{
+                    padding-left: @grid-point+4;
+                    padding-right: @grid-point*4;
+                }
+            }
+
+            &.right{
+                right: 0;
+                left: auto;
+                border-left: 1px solid @border-color-light;
+                top: 8px;
+                bottom: 8px;
+                color: @gray;
+                html[dir='rtl'] &{
+                    left: 0 !important;
+                    right: auto !important;
+                }
+                & + .form-control{
+                    padding-left: @grid-point+4;
+                    padding-right: @grid-point*4;
+                    html[dir='rtl'] &{
+                        padding-right: @grid-point+4 !important;
+                        padding-left: @grid-point*4 !important;
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            position: absolute;
+            z-index: 2;
+            right: 1px;
+            top: 1px;
+            bottom: 1px;
+            padding-left: @grid-point+4;
+            padding-right: @grid-point+4;
+            font-size: 16px;
+            border-radius: 0 4px 4px 0;
+            border: none;
+            background-color: transparent;
+            border-left: 1px solid transparent;
+            .w-5;
+            
+            a, button, input[type="submit"]{
+                color: @text-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                .items-center;
+            }
+
+            html[dir='rtl'] &{
+                right: auto;
+                left: 1px;
+                border-left: 0;
+                border-right: 1px solid transparent;
+            }
+        }
+    }
+
+    //When focus
+    &.focus{
+        .input-group-addon{
+            color: @text-color;
+        }
+        .input-group-addon:last-child{
+            background-color: @gray-lightest;
+            border-left: 1px solid @border-color-light;
+
+            html[dir='rtl'] &{
+                border-right: 1px solid @border-color-light;
+                border-left: 0;
+            }
+        }
+    }
+}
+
+//Input with dropdown action
+.input-group-dropdown{
+    .form-control{
+        padding-right: 12px;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;  
+        html[dir='rtl'] &{
+            padding-right: 0;
+            padding-left: 12px;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            border-top-right-radius: 4px !important;
+            border-bottom-right-radius: 4px !important;
+        }
+    }
+}
+.input-group-btn{
+    width: auto;
+
+    .btn.dropdown-toggle{
+        border: 1px solid @gray !important;
+    }
+
+    .dropdown-menu{
+        .arr-dropdown(@size:6px, @color:#FFF, @position:top, @left:auto, @right:16px);
+    }
+}
+
+//Textarea
+textarea.form-control{
+    min-width: @grid-point * 25;
+    min-height: @grid-point * 14;
+    padding: @grid-point 12px;
+}
+.editor_holder,
+.edit_menu_container{
+    border-radius: 4px;
+}
+
+.global_attachment{
+    border-radius: 0 0 4px 4px;
+}
+
+//Checkbox & Radio button
+div.radio, 
+div.checkbox{
+    .my-1;
+}
+
+.radio + .radio, .checkbox + .checkbox{
+    .mt-1;
+}
+
+.attachment-holder{
+    border:0;
+}

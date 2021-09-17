@@ -1,0 +1,17 @@
+{
+  "Enable CDN": "",
+  "Amazon Key ID": "",
+  "Amazon Secret Key": "",
+  "Bucket Name": "",
+  "Create a new bucket": "",
+  "Select a bucket": "",
+  "Your AWS access key and secret key are not valid.": "",
+  "Select region": "",
+  "Create": "",
+  "Save": "",
+  "Bucket can not empty": "",
+  "Bucket is added successfully": "",
+  "Can not create bucket. Bucket name may already exist or invalid.": "",
+  "Old files can not be moved to new bucket": "",
+  "Amazon CDN": ""
+}

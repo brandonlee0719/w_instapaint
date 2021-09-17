@@ -1,0 +1,489 @@
+#flavor_manager .fm_menu,
+#flavor_manager .fm_content,
+#flavor_manager .fm_sub_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  z-index: 10;
+  background: #f8f8f8;
+  overflow: auto;
+}
+#flavor_manager .fm_sub_menu {
+  display: block;
+  z-index: 20;
+  left: 270px;
+  bottom: 40px;
+}
+#flavor_manager .fm_responsive {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  text-align: right;
+  z-index: 50;
+  height: 40px;
+  background: #fff;
+  border-top: 1px #dfdfdf solid;
+  transition: height 0.8s ease;
+}
+#flavor_manager .fm_responsive > span {
+  position: absolute;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  top: 0;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  width: 40px;
+  text-indent: 0;
+  text-align: center;
+}
+#flavor_manager .fm_responsive > a,
+#flavor_manager .fm_responsive > a:hover {
+  display: inline-block;
+  text-indent: 0;
+  font-size: 14px;
+  margin-right: 5px;
+  color: #808080;
+  opacity: 0.6;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+#flavor_manager .fm_responsive > a.active,
+#flavor_manager .fm_responsive > a.active:hover,
+#flavor_manager .fm_responsive > a:hover {
+  opacity: 1;
+  color: #3498db;
+}
+#flavor_manager .fm_responsive > div > a,
+#flavor_manager .fm_responsive > div > a:hover {
+  transition: all 0.8s ease;
+  display: block;
+  height: 40px;
+  font-size: 13px;
+  line-height: 40px;
+  color: #9a9a9a;
+  text-decoration: none;
+  background: #555555;
+  text-indent: 10px;
+  border-top: 1px #626262 solid;
+  text-align: left;
+}
+#flavor_manager .fm_responsive > div > a:hover {
+  color: #fff;
+}
+#flavor_manager .fm_content {
+  background: #f2f2f2;
+  border-left: 2px #dfdfdf solid;
+  left: 270px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  overflow: auto;
+  z-index: 40;
+}
+#flavor_manager .fm_content > iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#flavor_manager .fm_content > .fm_loader {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+#flavor_manager .fm_content > .fm_loader > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  color: #808080;
+  opacity: 0.6;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+#flavor_manager .theme_icon {
+  height: 160px;
+  background-color: #f2f2f2;
+  border: 1px #e4e4e4 solid;
+  margin: 10px;
+  position: relative;
+}
+#flavor_manager .theme_icon .fm_uploader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 1;
+  margin: auto;
+}
+#flavor_manager .theme_icon .fm_uploader > span {
+  height: 160px;
+  line-height: 160px;
+  border-radius: 0;
+}
+#flavor_manager .theme_icon .fm_uploader > span > i {
+  line-height: 160px;
+  font-size: 24px;
+}
+#flavor_manager .theme_icon .fm_uploader > input {
+  height: 160px;
+}
+#flavor_manager .fm_menu {
+  overflow: hidden;
+  box-shadow: 7px 17px 45px -11px #000000;
+  bottom: 40px;
+}
+#flavor_manager .fm_menu .fm_menu_content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul {
+  margin-top: 10px;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a,
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #b3b3b3;
+  border-bottom: 1px #e9e9e9 solid;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.8s ease;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a .fa:not(.fa-chevron-right),
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover .fa:not(.fa-chevron-right),
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a .fa:not(.fa-spin),
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover .fa:not(.fa-spin) {
+  margin-left: 10px;
+  margin-right: 5px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a .fa-chevron-right,
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover .fa-chevron-right,
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a .fa-spin,
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover .fa-spin {
+  text-indent: 0;
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover {
+  color: #000;
+}
+#flavor_manager .fm_menu .fm_menu_content > ul > li > a:hover .fa-chevron-right {
+  opacity: 1;
+}
+#flavor_manager .fm_save {
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  top: 50px;
+  width: 270px;
+  bottom: 40px;
+  color: #808080;
+  text-align: center;
+  display: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+#flavor_manager .fm_save > i {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  margin-top: -15px;
+}
+#flavor_manager .fm_save > i.fa-check {
+  color: #54d98c;
+  font-weight: 600;
+}
+#flavor_manager .fm_sub_menu_title > button {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  font-size: 12px;
+  background: #0c0c0c;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+#flavor_manager .fm_sub_menu_title,
+#flavor_manager .fm_menu_title {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border-bottom: 1px #dfdfdf solid;
+  color: #222;
+  font-weight: 200;
+  font-size: 18px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 5px;
+  text-indent: 50px;
+}
+#flavor_manager .fm_sub_menu_title > i,
+#flavor_manager .fm_menu_title > i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  background: #f2f2f2;
+  font-size: 16px;
+  text-indent: 18px;
+  display: block;
+  cursor: pointer;
+  color: #808080;
+  opacity: 0.6;
+}
+#flavor_manager .fm_menu_title {
+  position: static;
+}
+#flavor_manager .fm_sub_menu_content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 10px;
+}
+#flavor_manager .ace_editor_holder {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#flavor_manager .fm_submit {
+  position: fixed;
+  left: 190px;
+  top: 10px;
+  z-index: 200;
+}
+#flavor_manager .fm_submit > span {
+  background: #2ecc71;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  opacity: 0.4;
+}
+#flavor_manager .fm_submit > span.active {
+  opacity: 1;
+}
+#flavor_manager .fm_uploader:hover {
+  transition: all 0.8s ease;
+}
+#flavor_manager .fm_uploader:hover > span {
+  opacity: 1 !important;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+#flavor_manager .fm_uploader {
+  transition: all 0.8s ease;
+  height: 40px;
+  position: relative;
+  margin: 20px 0;
+}
+#flavor_manager .fm_uploader > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px #808080 dashed;
+  border-radius: 6px;
+  opacity: 0.4;
+  z-index: -1;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+#flavor_manager .fm_uploader > span > i {
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  font-size: 16px;
+}
+#flavor_manager .fm_uploader > input {
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+#flavor_manager .fm_row,
+#flavor_manager .fm_setting {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px #dfdfdf solid;
+}
+#flavor_manager .fm_setting {
+  position: relative;
+}
+#flavor_manager .fm_row_title,
+#flavor_manager .fm_title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #808080;
+  margin-bottom: 5px;
+}
+#flavor_manager .fm_logos,
+#flavor_manager .fm_favicons,
+#flavor_manager .fm_banners > div,
+#flavor_manager .fm_default {
+  background: #f2f2f2;
+  border: 1px #dfdfdf solid;
+  display: block;
+  height: 100px;
+  width: 100%;
+  background-size: cover;
+}
+#flavor_manager .fm_default.square {
+  width: 100px;
+}
+#flavor_manager .fm_banners > div {
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+#flavor_manager .fm_banners > div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 5;
+}
+#flavor_manager .fm_banners > div span i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  z-index: 10;
+  color: rgba(255, 0, 0, 0.8);
+  cursor: pointer;
+}
+#flavor_manager .fm_banners > div:hover {
+  transition: all 0.5s ease;
+}
+#flavor_manager .fm_banners > div:hover span {
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+}
+#flavor_manager .fm_favicons {
+  width: 50px;
+  height: 50px;
+}
+body#page_route_flavors_manage #flavor_manager .fm_content > iframe {
+  transition: all 0.5s ease;
+}
+body#page_route_flavors_manage .js_box_holder {
+  top: 0;
+}
+.fm_responsive_mobile #flavor_manager .fm_content > iframe {
+  margin: 10px;
+  position: static;
+  width: 375px;
+  height: 667px;
+  transition: all 0.5s ease;
+}
+.fm_responsive_tablet #flavor_manager .fm_content > iframe {
+  margin: 10px;
+  position: static;
+  width: 768px;
+  height: 1024px;
+  transition: all 0.5s ease;
+}
+.fm_settings_holder {
+  height: 250px;
+  margin: -10px;
+  position: relative;
+}
+._colorpicker_holder {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  top: 26px;
+  border: 1px #e6e6e6 solid;
+}
+._colorpicker_holder:hover {
+  border-color: #297FC7;
+}
+.colpick {
+  z-index: 10000000000;
+}
+.upgrade_product_holder {
+  padding: 20px;
+  font-size: 12px;
+  background: rgba(255, 255, 0, 0.2);
+  color: #808080;
+}
+.upgrade_product_holder a,
+.upgrade_product_holder a:hover {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 11px;
+  border: 1px transparent solid;
+  border-top-color: #cdcdcd;
+  padding: 12px 0;
+}
+.upgrade_product_holder a:hover {
+  border: 1px #222 solid;
+  color: #222;
+}

@@ -1,0 +1,15 @@
+<upgrade>
+	<settings>
+		<setting>
+			<group>general</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>disable_ie_warning</var_name>
+			<phrase_var_name>setting_disable_ie_warning</phrase_var_name>
+			<ordering>16</ordering>
+			<version_id>3.0.1</version_id>
+			<value>0</value>
+		</setting>
+	</settings>
+</upgrade>

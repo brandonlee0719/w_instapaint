@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html {{ html }}>
+<head>
+	<title>{{ title }}</title>
+	{{ header }}
+</head>
+<body {{ body }}>
+<div id="pf-loading-message">
+	<span class="l-1"></span>
+	<span class="l-2"></span>
+	<span class="l-3"></span>
+	<span class="l-4"></span>
+	<span class="l-5"></span>
+	<span class="l-6"></span>
+</div>
+<div id="section-header">
+	<div class="sticky-bar visible-md visible-lg">
+		<div class="container-fluid">
+			{% if is_user() == true %}
+			<div class="row">
+				<div class="col-md-3 col-sm-3 hidden-xs">
+					{{ logo }}
+				</div>
+				{% if user_group_setting('search.can_use_global_search') %}
+				<div id="search-panel" class="col-md-4 col-sm-4 hidden-xs">
+					<div class="js_temp_friend_search_form"></div>
+					<form method="get" action="{{url('search')}}" class="header_search_form" id="header_search_form">
+						<div class="input-group has-feedback">
+							<input type="text" name="q" placeholder="{{ _p('Search...') }}" autocomplete="off" class="form-control js_temp_friend_search_input in_focus" id="header_sub_menu_search_input" />
+							<span class="input-group-btn" aria-hidden="true">
+								<button class="btn btn-global-search" type="submit">
+									 <i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div>
+					</form>
+				</div>
+				{% endif %}
+				<div id="user_sticky_bar" class="col-md-5 col-sm-5 pull-right"></div>
+			</div>
+			<div class="row visible-xs" id="header_search_form_xs">
+				<div class="col-md-12 panel_xs">
+					{% if user_group_setting('search.can_use_global_search') %}
+					<div class="js_temp_friend_search_form"></div>
+					<form method="get" action="{{url('search')}}" class="header_search_form_sm" id="header_search_form">
+						<div class="input-group-sm has-feedback relative">
+							<input type="text" name="q" placeholder="{{ _p('Search...') }}" autocomplete="off" class="form-control js_temp_friend_search_input in_focus" id="header_sub_menu_search_input_xs">
+							<span class="input-group-btn" aria-hidden="true">
+								<button class="btn btn-global-search" type="submit">
+									 <i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div>
+					</form>
+					{% endif %}
+				</div>
+			</div>
+			{% else %}
+			<div class="row">
+				<div class="col-md-4 col-sm-4 hidden-xs">
+					{{ logo }}
+				</div>
+				<div class="col-md-8 col-sm-8">
+					{{sticky_bar}}
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand visible-sm visible-xs">{{ logo }}</div>
+				<div class="sticky-bar-sm">
+					{{sticky_bar_sm}}
+				</div>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				{{menu}}
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	{{sticky_bar_xs}}
+	{{ location_6 }}
+</div>
+
+<div id="main" class="{{main_class}}">
+	<div class="container-fluid row_image">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				{{ location_11 }}
+			</div>
+		</div>
+		<div class="layout-main">
+			<div class="layout-left" id="left">
+				{{left}}
+			</div>
+			<div class="layout-middle" id="content-holder">
+				<div id="content-stage" class="bg-tran">
+					<div class="">
+						{{ breadcrumb }}
+					</div>
+					<div class="">
+						<div id="top">
+							{{ main_top }}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12" id="content">
+							{{ errors }}
+							{{ content }}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout-right" id="right">
+				{{ right }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				{{ location_8 }}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="bottom_placeholder">
+	{{ location_12 }}
+</div>
+
+<footer id="section-footer">
+	<div class="container-fluid">
+		{{ footer }}
+		{{ location_5 }}
+	</div>
+</footer>
+{{ js }}
+
+</body>
+</html>

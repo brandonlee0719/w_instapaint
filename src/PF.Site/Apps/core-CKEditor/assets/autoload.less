@@ -1,0 +1,63 @@
+.cke_editable {
+    font-size: 13px;
+    line-height: 1.6;
+
+    /* Fix for missing scrollbars with RTL texts. (#10488) */
+    word-wrap: break-word;
+}
+
+[dir="ltr"] {
+    .core-ckeditor-content {
+        blockquote {
+            padding-left: 20px;
+            padding-right: 8px;
+            border-left-width: 5px;
+        }
+
+        ul {
+            padding: 2px 0 2px 25px;
+            list-style-type: disc;
+        }
+        ol {
+            padding: 2px 0 2px 25px;
+            list-style-type: decimal;
+        }
+        img {
+            max-width: -moz-available;
+            max-width: -webkit-fill-available;
+            max-height: -moz-available;
+            max-height: -webkit-fill-available;
+        }
+    }
+}
+
+[dir="rtl"] {
+    .core-ckeditor-content {
+        ul {
+            padding: 2px 25px 2px 0;
+            list-style-type: disc;
+        }
+        ol {
+            padding: 2px 25px 2px 0;
+            list-style-type: decimal;
+        }
+        blockquote {
+            padding-left: 8px;
+            padding-right: 20px;
+            border-right-width: 5px;
+        }
+    }
+}
+
+blockquote {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 2px 0;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 0;
+}
+
+.marker {
+    background-color: Yellow;
+}

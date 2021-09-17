@@ -1,0 +1,364 @@
+select {
+    text-indent: 0;
+}
+
+.js_box {
+    .action_contain{
+        .r-0;
+    }
+    @media (max-width: 480px) {
+        .action_contain {
+            position: inherit !important;
+        }
+    }
+    .table {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="password"], textarea, input:focus, textarea:focus, select {
+        background: darken(@block-bg, 5%);
+    }
+
+    .js_custom_search_friend_holder {
+        background: darken(@block-bg, 5%);
+        border-top: darken(@block-bg, 8%);
+    }
+}
+
+.table {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.js_datepicker_image {
+    position: absolute;
+    right: @padding-base-horizontal;
+    top: @padding-base-vertical;
+
+    &:after {
+        .fa('\f073');
+        font-size: @font-size-base;
+    }
+}
+
+.js_datepicker_holder {
+    position: relative;
+    display: inline-block;
+}
+
+.select-date-label {
+    padding-right: @padding-base-horizontal;
+}
+
+.select-date-separator {
+    display: inline-block;
+    padding: 0 @padding-base-horizontal;
+}
+
+.js_datepicker_selects {
+    padding-top: @block-content-padding;
+}
+
+.js_date_picker {
+    background-color: transparent;
+}
+
+div.table_clear {
+    padding: 0;
+    margin-top: 20px;
+}
+
+input.button_link, input.button_link:hover, input.button_link:focus {
+    background: transparent;
+    color: @link-color !important;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: @font-size-base - 2;
+}
+
+input.button_link:hover {
+    color: @link-focus !important;
+    transition: @transition;
+}
+
+.page_section_menu_header {
+    top: 0;
+    position: relative;
+}
+
+a.page_section_menu_link:before {
+    .fa('\f054');
+    font-size: 20px;
+    position: absolute;
+    top: -40px;
+}
+
+a.page_section_menu_link > span {
+    display: none
+}
+
+[dir="ltr"]{
+    a.page_section_menu_link{right: 0}
+    a.page_section_menu_link:before{right: -15px}
+}
+[dir="rtl"]{
+    a.page_section_menu_link{left: 0}
+    a.page_section_menu_link:before{left: -10px}
+}
+
+a.page_section_menu_link{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: block;
+    color: @gray-light;
+}
+
+a.page_section_menu_link:hover {
+    color: @link-focus;
+    transition: @transition;
+}
+
+.page_section_menu_holder {
+    > .block {
+        > .title:first-of-type {
+            display: none;
+        }
+    }
+}
+
+.block {
+    .table {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+
+._ajax_image_large {
+    font-size: 30px;
+    color: @brand-primary;
+    display: inline-block;
+    margin: auto;
+}
+
+.js_tmp_upload_bar {
+    background: @block-bg;
+    border: 0;
+    height: 40px;
+    line-height: 40px;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.js_tmp_upload_bar_upload {
+    height: 40px;
+    line-height: 40px;
+    background: #3bd27a;
+    color: #fff;
+}
+
+.js_tmp_upload_bar_content {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 40px 0 0;
+    text-indent: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.js_temp_photo_holder {
+    position: absolute;
+    right: 5px;
+    z-index: 10;
+}
+
+.has_failed .js_tmp_upload_bar_upload {
+    background: @brand-danger;
+}
+
+code {
+    font-family: monospace;
+    white-space: pre;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    overflow: auto;
+    max-height: 400px;
+    display: block;
+
+    br {
+        display: none;
+    }
+}
+
+div.newline {
+    padding: 6px 0;
+    content: '';
+}
+
+button {
+    .reset();
+
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 26px;
+    cursor: pointer;
+    > i {
+
+    }
+}
+
+.label_hover label, .label_hover label:hover {
+    background: transparent;
+}
+
+.label_hover label:hover {
+    background: darken(@block-bg, 8%);
+}
+
+.field_separator {
+    display: none;
+}
+
+#js_register_accept {
+    input#agree {
+        display: inline-block;
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+.pf_process_form {
+    display: none;
+    padding: @block-content-padding;
+    border: 2px @line-gray-color dashed;
+    position: relative;
+    > .pf_process_bar {
+        height: 10px;
+        line-height: 10px;
+        background: @wrapper-gray-bg;
+    }
+
+    > span {
+        position: absolute;
+        top: @block-content-padding;
+        left: @block-content-padding;
+        display: block;
+        width: 2%;
+        height: 10px;
+        line-height: 10px;
+        background: @brand-success;
+    }
+
+    >.extra_info {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.table .table_right {
+    padding-bottom: @block-content-padding;
+}
+
+.js_upload_form_wrapper {
+    .js_upload_form_current {
+        display: none;
+    }
+
+    &.show-current {
+        .js_upload_form_current {
+            display: flex;
+        }
+
+        .js_upload_form {
+            display: none;
+        }
+    }
+}
+//block upload photo done > edit
+.change_photo_block{
+    display: flex;
+    align-items: center;
+
+    span, >a{
+        width: 72px;
+        border-radius: 3px;
+        .bg-img-ratio(72px);
+    }
+
+    .extra_info{
+        .ml-2();
+        display: inline-flex;
+        flex-direction: column;
+
+        a{
+            .fz-lh(12px);
+
+            .ico{
+                display: inline-block;
+            }
+
+            &.change_photo{
+                border-bottom: 1px solid @border-color-light;
+                margin-bottom: 8px;
+                padding-bottom: 8px;
+            }
+
+            &.remove{
+                color: @gray-dark;
+            }
+        }
+        
+        html[dir='rtl'] &{
+            margin-left: 0;
+            .mr-2();
+        }
+    }
+}
+//customfiled btn margin
+.js_custom_content_holder{
+    .btn-wrapper{
+        margin-top: 10px;
+        display: flex;
+        .btn{
+            .mr-1;
+        }
+    }
+}
+
+// Button
+.btn,
+.button{
+	&.btn-icon{
+		.fa,
+		.ico{
+			margin-right: @grid-point;
+			margin-left: 2px;
+
+			html[dir='rtl'] &{
+				margin-left: @grid-point;
+				margin-right: 2px;
+			}
+
+			&:last-child:nth-child(2){
+				.ml-1;
+				margin-right: 2px;
+	
+				html[dir='rtl'] &{
+					margin-left: 2px;
+				}
+			}
+		}
+	}
+}

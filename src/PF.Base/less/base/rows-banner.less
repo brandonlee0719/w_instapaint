@@ -1,0 +1,42 @@
+@row-baner-bg: @block-bg;
+@row-baner-overlay-bg: rgba(255, 255, 255, 0.5);
+
+.row_banner {
+    min-height: 90px;
+    height: auto;
+    margin-bottom: @block-margin-bottom;
+    position: relative;
+    overflow: hidden;
+    background-color: @row-baner-bg;
+
+    &.has_image header {
+        background-color: @row-baner-overlay-bg;
+        padding: @block-content-padding;
+    }
+
+    header {
+
+        & when not (@use-block-box) {
+            padding: @padding-base-vertical @padding-base-horizontal;
+        }
+
+        & when (@use-block-box) {
+            padding: @padding-base-vertical 0;
+        }
+        > ul {
+            > li {
+                display: inline-block;
+            }
+
+            > li:not(:first-of-type):before {
+                content: @separator;
+                padding-right: 8px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.row_banner.has_image {
+    height: 300px;
+}

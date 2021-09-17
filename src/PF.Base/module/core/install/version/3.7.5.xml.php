@@ -1,0 +1,15 @@
+<upgrade>
+	<phpfox_update_settings>
+		<setting>
+			<group>debug</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>drop</type>
+			<var_name>admin_debug_mode</var_name>
+			<phrase_var_name>setting_admin_debug_mode</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>2.0.0alpha1</version_id>
+			<value><![CDATA[a:2:{s:7:"default";s:7:"level_0";s:6:"values";a:4:{i:0;s:7:"level_0";i:1;s:7:"level_1";i:2;s:7:"level_2";i:3;s:7:"level_3";}}]]></value>
+		</setting>
+	</phpfox_update_settings>
+</upgrade>

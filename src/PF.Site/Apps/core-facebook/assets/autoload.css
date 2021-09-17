@@ -1,0 +1,43 @@
+#header_menu #js_block_border_user_login-block .title {
+  margin-bottom: 10px;
+}
+#header_menu #js_block_border_user_login-block form > .table:first-of-type:before {
+  content: ' ';
+  display: block;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.guest_login_small .fb_login_go {
+  background: #48649F !important;
+  border-color: transparent !important;
+  margin-top: 10px;
+}
+.fb_login_go {
+  cursor: pointer;
+  background: #48649F !important;
+  line-height: 30px;
+  border-radius: 3px;
+}
+.fb_login_go > i {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.fb_login_go:hover {
+  transition: all 300ms ease;
+  color: #fff;
+}
+.navbar-collapse .fb_login_go {
+  margin: 0 10px 10px 10px;
+}
+@media (min-width: 481px) {
+  .navbar-collapse .fb_login_go {
+    display: none;
+  }
+}
+.custom_signup .fb_login_go,
+.custom_login .fb_login_go {
+  display: inline-block;
+  padding-right: 10px;
+}

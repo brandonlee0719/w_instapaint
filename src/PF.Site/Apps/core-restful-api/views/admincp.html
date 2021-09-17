@@ -1,0 +1,47 @@
+{% if clients %}
+<div class="panel panel-default">
+	<div class="table-responsive">
+		<table class="table table-admin" >
+			<thead>
+			<tr>
+				<th style="width:20px"></th>
+				<th>{{ _p('ID') }}</th>
+				<th>{{ _p('Secret Key') }}</th>
+				<th>{{ _p('Name') }}</th>
+				<th>{{ _p('Active') }}</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% for client in clients %}
+			<tr class="{% if loop.index is odd %} tr{% endif %}">
+				<td class="t_center">
+					<a href="#" class="js_drop_down_link"></a>
+					<div class="link_menu">
+						<ul class="dropdown-menu">
+							<li><a href="{{ url('/restful_api/admincp/client', {id: client.client_id}) }}" class="popup">{{ _p('Edit') }}</a></li>
+							<li><a href="{{ url('/restful_api/admincp/client/delete', {id: client.client_id}) }}" class="sJsConfirm">{{ _p('Delete') }}</a></li>
+						</ul>
+					</div>
+				</td>
+				<td>{{ client.client_id }}</td>
+				<td>{{ client.client_secret }}</td>
+				<td>{{ client.client_name }}</td>
+				<td class="t_center">
+					<div class="js_item_is_active"{% if client.is_active %}{% else %} style="display:none;"{% endif %}>
+						<a href="#?call=restful_api.toggleClient&amp;id={{ client.client_id }}&amp;active=0" class="js_item_active_link" title="{_p var='Deactivate'}"></a>
+					</div>
+					<div class="js_item_is_not_active"{% if client.is_active %} style="display:none;"{% endif %}>
+						<a href="#?call=restful_api.toggleClient&amp;id={{ client.client_id }}&amp;active=1&amp;" class="js_item_active_link" title="{_p var='Activate'}"></a>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% else %}
+<div class="alert alert-empty">
+	There are no items found.
+</div>
+{% endif %}

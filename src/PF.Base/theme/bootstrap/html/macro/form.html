@@ -1,0 +1,80 @@
+{% macro checkbox(params) %}
+	<div class="form-control formCheckbox">
+		<label class="checkbox">
+			<input type="checkbox" name="val[{{ params.name }}]" {% if params.value %}checked{% endif %}/> {{ params.title }}
+		</label>
+	</div>
+{% endmacro %}
+
+{% macro radio(params) %}
+	<div class="form-group formRadio{% if params.switch %} formSwitch{% endif %}">
+		<label>{{ params.title }}</label>
+		<div>
+		{% for key, option in params.options %}
+			<label class="radio-inline"><input type="radio" name="val[{{ params.name }}]" value="{{ key }}" {% if params.value == key %}checked{% endif %}/> {{ option }}</label>
+		{% endfor %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro select(params) %}
+	<div class="form-group {% if params.multiple %}multiple{% endif %}">
+		{% if params.title %}
+		<label class="control-label">{{ params.title }}</label>
+		{% endif %}
+		<select class="form-control" id="__form_{{ params.name }}" name="val[{{ params.name }}]{% if params.multiple %}[]{% endif %}"{% if params.multiple %} multiple{% endif %}>
+			{% for key, option in params.options %}
+			<option value="{{ key }}"{% if option in params.values or params.value == key %} selected="selected"{% endif %}>{{ option }}</option>
+			{% endfor %}
+		</select>
+		{% if params.info %}
+		<div class="help-block">
+			{{ params.info }}
+		</div>
+		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro text(name, title, placeholder, value, type) %}
+	{% if title is null and placeholder is null %}
+		{% set title = name.title %}
+		{% set placeholder = name.placeholder %}
+		{% set name = name.name %}
+	{% endif %}
+	<div class="form-group">
+		{% if title %}
+			<label class="control-label">{{ title }}</label>
+		{% endif %}
+		<input class="form-control" id="__form_{{ name }}" type="{{ type|default('text') }}" name="val[{{ name }}]" value="{{ value }}" placeholder="{{ placeholder }}" />
+	</div>
+{% endmacro %}
+
+{% macro email(name, title, placeholder, value) %}
+	{% import _self as forms %}
+	{{ forms.text(name, title, placeholder, value, 'email') }}
+{% endmacro %}
+
+{% macro password(name, title, placeholder, value) %}
+	{% import _self as forms %}
+	{{ forms.text(name, title, placeholder, value, 'password') }}
+{% endmacro %}
+
+{% macro submit(title) %}
+<button type="submit" class="btn btn-primary">{{ title }}</button>
+{% endmacro %}
+
+{% macro textarea(name, title, placeholder, value) %}
+	{% if title is null and placeholder is null %}
+		{% set title = name.title %}
+		{% set placeholder = name.placeholder %}
+		{% set maxlength = name.maxlength %}
+		{% set name = name.name %}
+	{% endif %}
+
+	<div class="form-group">
+		{% if title is not null %}
+			<label class="form-control">{{ title }}</label>
+		{% endif %}
+		<textarea class="form-control" id="__form_{{ name }}" name="val[{{ name }}]" placeholder="{{ placeholder }}"{% if maxlength %} maxlength="{{ maxlength }}"{% endif %}>{{ value }}</textarea>
+	</div>
+{% endmacro %}

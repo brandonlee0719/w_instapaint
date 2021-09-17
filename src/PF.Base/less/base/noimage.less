@@ -1,0 +1,143 @@
+.no_image_user, .no_image_user:hover {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    vertical-align: bottom;
+
+    > span {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        font-weight: 400;
+        top:50% !important;
+        left: 50% !important;
+        transform: translate(-50%,-50%);
+        color: #FFF;
+    }
+
+    &._size__200, &._size__120 {
+        max-width: 100%;
+    }
+}
+
+._size__40, ._size__40:hover {
+    width: 40px;
+    height: 40px;
+
+    > span {
+        left: 2px;
+        font-size: 16px;
+    }
+}
+
+._size__50, ._size__50:hover {
+    width: 50px;
+    height: 50px;
+
+    > span {
+        left: 2px;
+    }
+}
+
+.i_size_32, .i_size_32:hover, ._size__32, ._size__32:hover, ._size__30, ._size__30:hover {
+    width: 32px;
+    height: 32px;
+
+    > span {
+        top: 7px;
+        left: 0;
+        font-size: 12px;
+    }
+}
+
+._size__120, ._size__120:hover {
+    width: 120px;
+    height: 120px;
+
+    > span {
+        font-size: 30px;
+    }
+}
+
+._size__200, ._size__200:hover {
+    width: 200px;
+    height: 200px;
+
+    > span {
+        font-size: 30px;
+    }
+    @media (max-width: 700px) {
+        width: 100px;
+        height: 100px;
+        > span {
+            font-size: 20px;
+        }
+    }
+}
+
+.no_image_item_cover::before {
+    .fa('\f05e');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    opacity: 0.4;
+    color: @block-color;
+}
+
+.no_image_item_cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: darken(@block-bg, 4%);
+    z-index: 1;
+}
+
+.no_image_item {
+    display: inline-block;
+    background: darken(@block-bg, 2%);
+}
+
+.i_size__32, .i_size_32 {
+    width: 32px;
+    height: 32px;
+}
+
+.i_size__50, .i_size_50 {
+    width: 50px;
+    height: 50px;
+}
+
+.i_size__100, .i_size_100 {
+    width: 100px;
+    height: 100px;
+}
+
+.i_size__120_square, .i_size__120, .i_size_120 {
+    width: 120px;
+    height: 120px;
+}
+
+.i_size__160, .i_size_160 {
+    width: 160px;
+    height: 160px;
+}
+
+.i_size__200_square, .i_size__200, .i_size_200 {
+    width: 200px;
+    height: 200px;
+}
+
+.i_size__250_square, .i_size__250, .i_size_250 {
+    width: 250px;
+    height: 250px;
+}

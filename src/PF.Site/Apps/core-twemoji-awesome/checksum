@@ -1,0 +1,15 @@
+1d77a0eda9030386b10345e05a507db1 PF.Site/Apps/core-twemoji-awesome/assets/autoload.css
+7156a7a4124597315c1bcb2d913f02a0 PF.Site/Apps/core-twemoji-awesome/assets/autoload.js
+01aee3bfd1d468e591b8e297db9a7b34 PF.Site/Apps/core-twemoji-awesome/assets/autoload.less
+87e4568b7fc1a0be200117910f401d04 PF.Site/Apps/core-twemoji-awesome/Block/Share.php
+c2ae020b5a60b7c4102fdba9b5b92d31 PF.Site/Apps/core-twemoji-awesome/change-log.md
+00cbfa59498839615ddcb5175b433071 PF.Site/Apps/core-twemoji-awesome/emoji-cheat-sheet.html
+98d737849870b677df5506b79a745acd PF.Site/Apps/core-twemoji-awesome/hooks/bundle__start.php
+4f092ea376952460db199ae12300fc96 PF.Site/Apps/core-twemoji-awesome/hooks/get_master_phrases.php
+de11ac27df828260308ee5cbfd986975 PF.Site/Apps/core-twemoji-awesome/icon.png
+f3b6db731ec821570e7d8c8833db38f7 PF.Site/Apps/core-twemoji-awesome/Install.php
+3717f4d9b3c7d35e7df9df01f9341f99 PF.Site/Apps/core-twemoji-awesome/LICENSE.md
+17e83fb41615a3dd2958cfb8552785f5 PF.Site/Apps/core-twemoji-awesome/phrase.json
+261a7400f2b1f64d6639a67dc3fc26a3 PF.Site/Apps/core-twemoji-awesome/README.md
+20e9b319dfbbc647bd5b5882c0b8d7e2 PF.Site/Apps/core-twemoji-awesome/start.php
+c23ce41e68ab16037e50e2df21a95966 PF.Site/Apps/core-twemoji-awesome/views/block/share.html.php

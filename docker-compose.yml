@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: ./docker/web
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
+    restart: always
+    depends_on:
+      - db
+  db:
+    image: mysql:5
+    ports:
+      - 1234:3306
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+    restart: always
+    environment:
+       MYSQL_ROOT_PASSWORD: mysql
+       MYSQL_DATABASE: instapaint
+       MYSQL_USER: mysql
+       MYSQL_PASSWORD: mysql

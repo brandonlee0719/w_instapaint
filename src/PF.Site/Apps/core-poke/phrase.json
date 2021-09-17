@@ -1,0 +1,10 @@
+{
+  "Pokes Limit": "",
+  "your_poke_successfully_sent": "Your poke successfully sent",
+  "Define the limit of how many other users poked current logged user can be displayed when viewing in member home page.": "",
+  "poke_app": "Poke",
+  "users_tagged_you_in_a_comment_on_your_poke_for_title": "{users} tagged you in a comment on your poke for \"{title}\"",
+  "users_tagged_you_in_a_commented_on_gender_poke_for_title": "{users} tagged you in a commented on {gender} poke for \"{title}\"",
+  "users_tagged_you_in_a_comment_on_span_class_drop_data_user_row_full_name_s_span_poke_for_title": "{users} commented on <span class=\"drop_data_user\">{row_full_name}'s</span> poke for \"{title}\"",
+  "view_all_total": "View All ({total})"
+}

@@ -1,0 +1,111 @@
+#section-header {
+    .site-logo {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .main-menu-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+        height: 50px;
+        font-size: 20px;
+        padding-top: 15px;
+
+        i {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.btn.btn-global-search{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-right-menu {
+    ._image__50_square {
+        display: block !important;
+    }
+    .btn-abr {
+        font-size: 1em;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: @gray-lighter;
+    }
+    .pl-5 {
+        padding-left: 1px;
+    }
+    li:hover .btn-abr {
+
+    }
+    li.open .btn-abr {
+        background-color: rgba(255, 255, 255, 1.0);
+        color: @brand-primary;
+    }
+
+    .dropdown-menu {
+        right: -1px;
+    }
+    .dropdown-panel,
+    .dropdown-menu {
+        margin-top: -1px;
+    }
+    .dropdown-panel-body {
+        position: relative;
+    }
+
+    .panel_rows {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
+    .panel_actions {
+        border-top: 1px solid @block-border;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 1px;
+        line-height: 38px;
+        a {
+            color: @block-color;
+        }
+        a:hover {
+            color: @brand-primary;
+        }
+    }
+}
+
+@media (min-width: @screen-sm) {
+    .dropdown-panel {
+        right: -60px;
+    }
+}
+
+[dir="ltr"] {
+    @media (min-width: @screen-xs){
+        .dropdown-panel {
+            right: -80px;
+        }
+    }
+}
+
+[dir="rtl"] {
+    .dropdown-panel {
+        right: auto;
+        @media (min-width: @screen-xs) {
+            left: -80px;
+        }
+        @media (min-width: @screen-sm) {
+            left: -60px;
+        }
+    }
+}

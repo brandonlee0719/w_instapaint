@@ -1,0 +1,16 @@
+{% import '@Theme/macro/form.html' as Form %}
+<form method="post" action="{{ url('/pfcdn/acp/server') }}" class="ajax_post">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			{% if is_edit %}
+			<input type="hidden" name="id" value="{{ server.id }}">
+			{% endif %}
+			{{ Form.text('upload', null, 'Upload URL', server.value.upload) }}
+			{{ Form.text('url', null, 'View URL', server.value.url) }}
+			{{ Form.text('key', null, 'Secret Key', server.value.key) }}
+		</div>
+		<div class="panel-footer">
+			{{ Form.submit('Submit') }}
+		</div>
+	</div>
+</form>

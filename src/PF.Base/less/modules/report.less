@@ -1,0 +1,17 @@
+.report_this_item {
+    padding: @block-content-padding;
+}
+
+a.item_bar_flag {
+    color: @block-color;
+
+    &:hover {
+        color: @brand-danger;
+        transition: @transition;
+    }
+
+    &:before {
+        .fa('\f024');
+        padding-right: @padding-small-horizontal;
+    }
+}

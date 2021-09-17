@@ -1,0 +1,8 @@
+<form method="post" action="{{ url('/flavors/manage', {id: flavor.id, type: 'delete', process: 'yes'}) }}" class="ajax_post form">
+	<div class="error_message">
+		{{ _p('You are about to delete a theme. Are you sure you want to do this?') }}
+	</div>
+	<div class="form-group">
+		<input type="submit" value="{{ _p('Yes, Delete It!') }}" class="btn btn btn-error">
+	</div>
+</form>

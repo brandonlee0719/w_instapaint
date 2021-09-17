@@ -1,0 +1,88 @@
+<upgrade>
+    <settings>
+        <setting>
+            <group>cdn</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>boolean</type>
+            <var_name>phpfox_cdn_js_css_enable</var_name>
+            <phrase_var_name>setting_phpfox_cdn_js_css_enable</phrase_var_name>
+            <ordering>1</ordering>
+            <version_id>4.3.0</version_id>
+            <value>0</value>
+        </setting>
+        <setting>
+            <group>cdn</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>string</type>
+            <var_name>phpfox_cdn_js_css_url</var_name>
+            <phrase_var_name>setting_phpfox_cdn_js_css_url</phrase_var_name>
+            <ordering>2</ordering>
+            <version_id>4.3.0</version_id>
+            <value></value>
+        </setting>
+        <setting>
+            <group>general</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>integer</type>
+            <var_name>number_of_items_on_main_menu</var_name>
+            <phrase_var_name>setting_number_of_items_on_main_menu</phrase_var_name>
+            <ordering>3</ordering>
+            <version_id>4.3.0</version_id>
+            <value>13</value>
+        </setting>
+        <setting>
+            <group>registration</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>boolean</type>
+            <var_name>registration_sms_enable</var_name>
+            <phrase_var_name>setting_registration_sms_enable</phrase_var_name>
+            <ordering>18</ordering>
+            <version_id>4.3.0</version_id>
+            <value>0</value>
+        </setting>
+        <setting>
+            <group>registration</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>drop</type>
+            <var_name>registration_sms_service</var_name>
+            <phrase_var_name>setting_registration_sms_service</phrase_var_name>
+            <ordering>19</ordering>
+            <version_id>4.3.0</version_id>
+            <value><![CDATA[a:2:{s:7:"default";s:5:"nexmo";s:6:"values";a:3:{i:0;s:5:"nexmo";i:1;s:6:"twilio";i:2;s:10:"clickatell";}}]]></value>
+        </setting>
+        <setting>
+            <group>registration</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>string</type>
+            <var_name>nexmo_api_key</var_name>
+            <phrase_var_name>setting_nexmo_api_key</phrase_var_name>
+            <ordering>20</ordering>
+            <version_id>4.3.0</version_id>
+            <value></value>
+        </setting>
+        <setting>
+            <group>registration</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>string</type>
+            <var_name>nexmo_api_secret</var_name>
+            <phrase_var_name>setting_nexmo_api_secret</phrase_var_name>
+            <ordering>21</ordering>
+            <version_id>4.3.0</version_id>
+            <value></value>
+        </setting>
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="twilio_account_id" phrase_var_name="setting_twilio_account_id" ordering="22" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="twilio_auth_token" phrase_var_name="setting_twilio_auth_token" ordering="23" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="twilio_phone_number" phrase_var_name="setting_twilio_phone_number" ordering="24" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="clickatell_username" phrase_var_name="setting_clickatell_username" ordering="25" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="clickatell_password" phrase_var_name="setting_clickatell_password" ordering="26" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="clickatell_app_id" phrase_var_name="setting_clickatell_app_id" ordering="27" version_id="4.3.0" />
+        <setting group="registration" module_id="core" is_hidden="0" type="string" var_name="nexmo_phone_number" phrase_var_name="setting_nexmo_phone_number" ordering="28" version_id="4.3.0" />
+    </settings>
+</upgrade>

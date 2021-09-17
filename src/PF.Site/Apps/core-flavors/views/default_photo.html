@@ -1,0 +1,14 @@
+{% for key, photo in photos %}
+<div class="fm_row">
+	<div class="fm_row_title">
+		{{ photo.title }}
+	</div>
+	<div data-src="{{ photo.value }}" class="fm_default_photo fm_default image_load fm_{{key}}{% if photo.square is not empty %} square{% endif %}">
+		<a {% if photo.value is empty %}style="display:none;"{% endif%} href="javascript:void(0);" data-url="{{ url('/flavors/manage', {id: flavor.id}) }}&type=remove_default&sub_type={{key}}" class="skip remove-btn btn-sm"><span><i class="fa fa-times"></i></span></a>
+	</div>
+	<div class="fm_uploader">
+		<span><i class="fa fa-upload"></i></span>
+		<input type="file" class="ajax_upload" value="Upload" name="{{key}}" accept="image/*" data-url="{{ url('/flavors/manage', {id: flavor.id}) }}&type=default_photo&sub_type={{key}}" data-onstart="flavor_start">
+	</div>
+</div>
+{% endfor %}

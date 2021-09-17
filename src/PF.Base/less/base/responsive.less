@@ -1,0 +1,37 @@
+@media (max-width: @screen-md) {
+    .profile_image {
+        bottom: @block-content-padding;
+        left: @block-content-padding;
+    }
+}
+
+@media (max-width: @screen-xs) {
+
+    .profile_image {
+        top: auto;
+        bottom: 100px;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .pages_header_info .pages_header_name h1 {
+        max-width: 280px;
+    }
+
+    .pages_header_image {
+        width: 100px;
+    }
+
+    .pages_header_image ._size__120 {
+        &, &:hover {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .activity_like_holder {
+        display: none;
+    }
+}

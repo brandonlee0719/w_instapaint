@@ -1,0 +1,211 @@
+@import "variables";
+
+body {
+    background:@body_bg;
+	color:@color;
+}
+
+a, a:hover {
+	color:@link;
+}
+
+a:hover {
+	color:@link_hover;
+}
+
+.breadcrumbs-top {
+	border-bottom-color:@border;
+}
+
+.navbar-default {
+  background:@nav_bar_bg;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover {
+  color:@nav_bar_color;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background:@nav_bar_bg_hover;
+  color:@nav_bar_color_hover;
+}
+
+.navbar-default .navbar-nav > li > a.menu_is_selected, .navbar-default .navbar-nav > li > a.menu_is_selected:hover, .navbar-default .navbar-nav > li > a.menu_is_selected:focus {
+  background:@nav_bar_bg_active;
+  color:@nav_bar_color_active;
+}
+
+.sticky-bar {
+  background:@header_bg;
+}
+@media (max-width: 992px){
+    .navbar-header{
+        background-color: @header_bg;
+    }
+}
+
+#js_block_border_core_menusub ul.action > li.active > a, #js_block_border_core_menusub ul.action > li.active > a:hover, #js_block_border_core_menusub ul.action > li.active > a:focus {
+	border-left-color:@brand_primary_border;
+	background:@section_menu_active_bg;
+	color:@section_menu_active_color;
+}
+
+#content-stage {
+  background:@content_bg;
+}
+
+.container-fluid {
+  max-width:@container_width;
+}
+
+footer, .footer-holder {
+  background:@footer_bg;
+  color:@footer_color;
+
+  a, a:hover {
+	  color:@footer_color;
+  }
+}
+
+.btn-success, .btn-success:hover, .btn-success:focus, .btn-success:active {
+    background:@brand_success;
+    color:@brand_success_color;
+	border-color:@brand_success_border;
+}
+
+.btn-success:hover {
+	background:lighten(@brand_success, 5%);
+}
+
+.form-control, .edit_menu_container {
+	border-color:@form_border;
+    background:@form_bg;
+    color:@form_color;
+}
+
+.form-control:focus {
+	box-shadow:@form_focus_box_shadow;
+	border-color:@form_focus_border;
+}
+
+#header_search_form span.form-control-feedback {
+  background:@search_button_bg !important;
+  color:@search_button_color !important;
+}
+
+ul.action > li {
+	border-bottom-color:@block_title_border !important;
+}
+
+ul.action > li > a, ul.action > li > a:hover {
+	color:@block_color !important;
+}
+
+ul.action > li > a:hover {
+	color:@link_hover !important;
+}
+
+.block {
+	background:@block_bg !important;
+
+	.title {
+		color:@block_title_color !important;
+		border-bottom-color:@block_title_border !important;
+		font-size:@block_title_size !important;
+	}
+
+	.content {
+		color:@block_color !important;
+
+		.extra_info, .extra_info_link {
+			color:@block_color !important;
+		}
+	}
+}
+
+#header_search_form input.form-control {
+	background:@search_bg;
+	color:@search_color;
+}
+
+.item_selection_not_active .item_is_not_active, .item_selection_active .item_is_active, .page_section_menu ul li.active a, .page_section_menu ul li.active a:hover, .btn-primary, .btn-primary:hover {
+	background:@button_bg !important;
+	color:@button_color !important;
+	border-color:@button_border !important;
+}
+
+.btn-primary:hover, .page_breadcrumbs_menu .btn-success:hover {
+	opacity:0.8;
+}
+
+.feed_like_link a.js_like_link_toggle.liked {
+	color:@brand_primary;
+}
+
+.page_breadcrumbs_menu .btn-success, .page_breadcrumbs_menu .btn-success:hover {
+	background:@action_bg;
+	color:@action_color;
+	border-color:darken(@action_bg, 5%);
+	font-size:@action_size;
+}
+
+.page_breadcrumbs_menu > a > span:before {
+	content: '+';
+	display:inline-block;
+	padding-right:5px;
+}
+
+a.activity_feed_content_link_title, a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link, #content div.row_title_info h1 a.link:hover {
+	color:@link_focus !important;
+}
+
+a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link:hover {
+	color:@link_focus_hover !important;
+}
+
+.header_filter_holder .btn {
+	background:@button_default_bg;
+	border-color:darken(@button_default_bg, 2%);
+	color:@button_default_color;
+}
+
+.header-right-menu li.open .btn-abr, ._moderator a.moderate_link_active i::before, ._moderator a.moderate_link_active:hover i::before {
+	color:@brand_primary;
+}
+
+.profile_menu_is_fixed .profiles_menu {
+	background:@header_bg;
+}
+
+.profile_menu_is_fixed .profiles_menu > ul > li > a, .profile_menu_is_fixed .profiles_menu > ul > li > a:hover {
+	color:@header_color;
+}
+
+.profile_menu_is_fixed .profiles_menu > ul > li > a:hover {
+	opacity:0.6;
+}
+
+.feed_is_child {
+	display:inline-block;
+
+	div.row1, div.row2 {
+		background:darken(@feed_bg, 5%);
+		margin:0;
+	}
+
+	.js_feed_comment_border {
+		display:none;
+	}
+}
+
+#right #js_block_border_user_register {
+	background:fade(#0c0c0c, 85%) !important;
+
+	.table_left {
+		color:#fff !important;
+	}
+
+	.extra_info {
+		color:#fff !important;
+	}
+}

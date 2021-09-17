@@ -1,0 +1,20 @@
+<div class="fm_row">
+	<div class="fm_row_title">
+		{{ _p('Logo') }}
+	</div>
+	<div data-src="{{ logo }}" class="image_load fm_logos"></div>
+	<div class="fm_uploader">
+		<span><i class="fa fa-upload"></i></span>
+		<input type="file" class="ajax_upload" value="Upload" name="logo" accept="image/*" data-url="{{ url('/flavors/manage', {id: flavor.id}) }}&type=logo&sub_type=logos" data-onstart="flavor_start">
+	</div>
+</div>
+<div class="fm_row">
+	<div class="fm_row_title">
+		{{ _p('Favicon') }}
+	</div>
+	<div data-src="{{ favicon }}" class="image_load fm_favicons"></div>
+	<div class="fm_uploader">
+		<span><i class="fa fa-upload"></i></span>
+		<input type="file" class="ajax_upload" value="Upload" name="logo" accept="image/*" data-url="{{ url('/flavors/manage', {id: flavor.id}) }}&type=logo&sub_type=favicons" data-onstart="flavor_start">
+	</div>
+</div>

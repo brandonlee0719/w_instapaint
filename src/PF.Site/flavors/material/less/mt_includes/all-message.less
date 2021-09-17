@@ -1,0 +1,238 @@
+/*===================================
+=            All Message            =
+===================================*/
+
+.all-message-container{
+	.mail_holder{
+		margin:0 -16px;
+		.p-0;
+		.pl-8;
+		.pr-2;
+		border-bottom: none;
+		&:first-child{
+			.item-outer{
+				border-top: none;
+			}
+		}
+		&:last-child{
+			.item-outer{
+				border-bottom:1px solid @border-color-light;
+			}
+		}
+		&.mail_is_new{
+			background: lighten(@brand-primary,45%) !important;
+			.mail_preview{
+				color: @text-color;
+			}
+		}
+		&:hover,&.active{
+			.item-outer{
+				border-color: @border-color;
+			}
+			& + .mail_holder{
+				.item-outer{
+					border-top-color: @border-color;
+				}
+			}
+			@media (min-width:@screen-md-min){
+				background: @gray-lightest;
+			}
+			.js_hover_info, 
+			.img-wrapper{
+				&:before{
+					border: 1px solid @brand-primary-dark;
+				}
+			}
+			.img-wrapper,
+			.no_image_user{
+				box-shadow: 0px 6px 12px 0px rgba(38, 129, 213, 0.4);
+			}
+		}
+		.moderation_row{
+			position: absolute;
+			top: 50%;
+			.l-0;
+			transform:translateY(-50%);
+		}
+		.item-outer{
+			display: flex;
+			align-items: center;
+			position: relative;
+			.py-2;
+			border-top: 1px solid @border-color-light;
+			.transition(all 300ms ease);
+	
+			.item-click{
+				position: absolute;
+				.t-0;
+				.l-0;
+				.r-0;
+				.b-0;
+			}
+			
+			.notification-delete {
+				position: absolute;
+				.b-3;
+				.r-0;
+				height: 13px;
+				span.ico{
+					color: @brand-primary-lighter;
+				}
+				&:hover{
+					span.ico{
+						color: @brand-primary;
+					}
+				}
+			}
+			.item-media-src{
+				.mr-2;
+				.img-wrapper,
+				.no_image_user{
+					.s-7;
+				}
+			}
+			.item-inner{
+				overflow:hidden;
+				flex:1;
+				align-items: center;
+				.item-title-time{
+					display: flex;
+					.item-title{
+						flex:1;
+						.truncate-1();
+						a{
+							.fz-lh(14px);
+							font-weight: bold;
+							color: @gray-darker;
+						}
+					}
+					.item-time{
+						.pr-2;
+						color: @gray-dark;
+						&.not-has-unread{
+							.pr-0;
+						}
+						@media (max-width:480px){
+							font-size: 12px;
+						    line-height: 18px;
+						}
+						.js_mail_mark_read,
+						.js_mail_mark_unread{
+							position: absolute;
+							bottom: 50px;
+							right: 2px;
+							html[dir='rtl'] &{
+								right: auto;
+								left: 2px;
+							}
+							a{
+								background: none;
+								border-radius: 100%;
+								display: block;
+							    .s-1;
+							    .transition(all 300ms ease);
+							}
+						}
+						.js_mail_mark_unread{
+							a{
+								border: 1px solid @gray;
+							    &:hover{
+							    	background: @brand-primary;
+							    	border: none;
+							    }
+							}
+						}
+						.js_mail_mark_read{
+							a{
+								background: @brand-primary;
+							    
+							}
+						}
+					}
+				}
+				.mail_preview{
+					.truncate-1();
+					.pr-4;
+					html[dir='rtl'] &{
+						span.ico{
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#page_mail_index{
+	//override core top block
+	._block_top{
+	    height: 56px;
+	    margin-top: -16px;
+	    padding-top: 12px;
+	}
+	
+	// .btn-app-addnew{
+	// 	bottom: -105px;
+	// 	max-width: 40px;
+	// 	.h-3;
+	// 	border-left:1px solid @border-color-light;
+	// 	.items-center();
+	// 	html[dir='rtl'] &{
+	// 		border-left:none;
+	// 		border-right: 1px solid @border-color-light;
+	// 	}
+	// 	@media (max-width:@screen-sm-max){
+	// 		bottom: -113px;
+	// 	}
+	// 	@media (max-width:480px){
+	// 		.r-0;
+	// 	}
+	// 	& > a{
+	// 		border-radius: 0;
+	// 		background: none !important;
+	// 		box-shadow: none !important;
+	// 		color: @brand-primary;
+	// 		font-size: 16px;
+	// 		&:before{
+	// 			opacity: 0 !important;
+	// 		}
+	// 		&:hover{
+	// 			color: @brand-primary-dark;
+	// 		}
+	// 	}
+	// 	span.ico{
+	// 		&:before{
+	// 			.ico-content("\e9c4");
+	// 		}
+	// 		html[dir='rtl'] &{
+	// 			transform: scaleX(-1); 
+	// 		}
+	// 	}
+	// }
+	.item-mark-all-read{
+		position: absolute;
+		top: -37px;
+		.r-0;
+		& > span{
+			html[dir='rtl'] &{
+				display: inline-block;
+			}
+		}
+	}
+}
+/*=====  End of All Message  ======*/
+
+//fix conversation 
+#js_main_mail_thread_holder{
+	.mail_thread_holder{
+		.mail_user_image{
+			.img-wrapper,.no_image_user{
+				.s-6;
+			}
+		}
+	}
+	.mail_thread_form_holder{
+		.mt-3;
+	}
+}

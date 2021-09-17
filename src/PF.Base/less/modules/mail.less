@@ -1,0 +1,515 @@
+.mail_thread {
+    width: @content-width;
+    top: 20px;
+    bottom: auto;
+    left: 50%;
+    margin-left: -(@content-width / 2);
+    display: block;
+    z-index: 1999 !important;
+    position: absolute;
+    .mail_text img {
+        max-width: 100%;
+    }
+
+    @media (max-width: 700px) {
+        width: 300px;
+        margin-left: -150px;
+        top: 10vh;
+
+        ._size__50 {
+            width: 32px;
+            height: 32px;
+
+            > span {
+                font-size: 0.9em;
+                top: 8px;
+            }
+        }
+        .mail_thread_holder {
+            width: 90%;
+
+            &:not(.is_user) .mail_content {
+                margin-left: 50px !important;
+            }
+
+            &.is_user .mail_content {
+                margin-right: 50px !important;
+            }
+
+            .mail_user_image {
+                width: 32px !important;
+                height: 32px !important;
+                .img-wrapper {
+                    > img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .mail_text img {
+            width: 100%;
+        }
+    }
+
+
+    .js_box_close {
+        z-index: 300;
+    }
+
+    .js_box_title {
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        // position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        text-indent: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: @content-width;
+        padding-right: 40px;
+
+        h1 {
+            height: 40px;
+            line-height: 40px;
+            font-size: @font-size-base + 2;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    #js_ajax_compose_error_message {
+        @media (max-width: 700px) {
+            width: 300px;
+        }
+        @media (max-width: 390px) {
+            width: 200px;
+        }
+        width: @content-width;
+        position: fixed;
+        background: @block-bg;
+        z-index: 1;
+    }
+
+    .mail_messages {
+        position: static;
+        padding: 0;
+        height: 60vh;
+        overflow-y: auto;
+    }
+
+    .mail_messages {
+        background: @body-bg;
+        top: 40px;
+        bottom: 65px;
+        overflow: auto;
+        padding: 10px 0;
+    }
+
+    .mail_thread_form_holder {
+        // position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        // height: 60px;
+        margin: 0;
+        padding: 0;
+
+        textarea, textarea:focus {
+            height: 50px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            border: 0;
+            text-indent: 0;
+            font-size: @font-size-base - 1;
+            background: @block-bg;
+            color: @block-color;
+        }
+    }
+}
+
+.mail_thread_holder.is_user {
+    margin-right: 0;
+    margin-left: auto;
+
+    .mail_user_image {
+        left: auto;
+        right: 10px;
+    }
+
+    .mail_content {
+        margin-left: auto;
+        margin-right: 70px;
+    }
+}
+
+[dir=rtl]{
+    .mail_thread_holder.is_user {
+        margin-right: auto;
+        margin-left: 0;
+
+        .mail_user_image {
+            left: 10px;
+            right: auto;
+        }
+
+        .mail_content {
+            margin-left: 70px;
+            margin-right: auto;
+        }
+    }
+}
+
+.mail_thread_holder {
+    width: 80%;
+    position: relative;
+    font-size: @font-size-base - 1;
+
+    .mail_user_image {
+        position: absolute;
+        left: 10px;
+        top: 0;
+    }
+
+    .mail_content {
+        margin-left: 70px;
+        min-height: 50px;
+        position: relative;
+        background: @block-bg;
+        color: @block-color;
+        padding: @block-content-padding;
+        margin-bottom: @block-margin-bottom;
+        .mail_text{
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+        .attachment_holder_view {
+            margin-top: @block-content-padding/2;
+
+            .attachment_header_holder {
+                padding: @block-content-padding/4;
+            }
+
+            .attachment_row {
+                padding: @block-content-padding/2;
+                border: 1px solid darken(@block-bg, 4%);
+            }
+
+        }
+    }
+
+    .mail_time_stamp {
+        @media (max-width: 700px) {
+            top: 3px;
+        }
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: @font-size-base - 4;
+
+        [dir=rtl] & {
+            right: auto;
+            left: 10px;
+        }
+    }
+}
+
+[dir="rtl"]{
+    .mail_thread_holder {
+        .mail_user_image {
+            left: auto;
+            right: 10px;
+        }
+
+        .mail_content {
+            margin-left: 0;
+            margin-right: 70px;
+        }
+
+        .mail_time_stamp {
+            right: auto;
+            left: 10px;
+        }
+    }
+}
+
+.mail_thread_form_holder_inner {
+    background: @block-bg;
+}
+
+.mail_view_more, .mail_view_more:hover {
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: @font-size-base - 2;
+}
+
+.mail_holder {
+    border-bottom: 1px #dfdfdf solid;
+    padding: 10px 0;
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 10px;
+
+    .extra_info {
+        font-size: 10px;
+        padding-top: 5px;
+    }
+}
+
+.mail_image {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.mail_content {
+    @media (max-width: 700px) {
+        min-width: 150px;
+    }
+    @media (max-width: 390px) {
+        min-width: 100px;
+    }
+    margin-left: 60px;
+    position: relative;
+    min-width: 250px;
+    .mail_text{
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.mail_action {
+    position: absolute;
+    right: 4px;
+    bottom: 12px;
+    font-size: 10px;
+    color: #808080;
+
+    li {
+        float: left;
+        height: 16px;
+        line-height: 16px;
+        padding-left: 6px;
+    }
+}
+
+[dir=rtl]{
+    .mail_image {
+        left: auto;
+        right: 0;
+    }
+    .mail_content {
+        margin-left: 0;
+        margin-right: 60px;
+    }
+
+
+    .mail_action {
+        right: auto;
+        left: 4px;
+        li {
+            float: right;
+            padding-right: 6px;
+            padding-left: 0;
+        }
+    }
+}
+
+.mail_link {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.mail_preview {
+    padding: 5px 0 0 0;
+    color: #808080;
+}
+
+.mail_delete,
+.mail_delete:hover,
+.mail_read,
+.mail_read:hover {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+
+.mail_delete {
+    background: url('@{image-folder}layout/action_delete.png') no-repeat;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.mail_read {
+    background: url('@{image-folder}layout/mail_read.png') no-repeat;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.mail_is_new {
+    background: #EDEFF4;
+}
+
+.mail_moderation {
+    position: absolute;
+    left: 2px;
+    top: 20px;
+}
+
+#js_mail_textarea #message {
+    height: 30px;
+}
+
+.mail_next_prev {
+    position: absolute;
+    right: 0;
+    background: #f9f9f9;
+    border: 1px #dfdfdf solid;
+
+    -moz-box-shadow: 3px 3px 3px #f9f9f9;
+    -webkit-box-shadow: 3px 3px 3px #f9f9f9;
+    box-shadow: 3px 3px 3px #f9f9f9;
+
+    ul li {
+        a, a:hover {
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 50px;
+            overflow: hidden;
+            text-indent: -1000px;
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        &.next_message a, &.next_message a:hover {
+            border-left: 1px #dfdfdf solid;
+            background: url('@{image-folder}layout/next_message.png') no-repeat;
+        }
+
+        &.previous_message a, &.previous_message a:hover {
+            background: url('@{image-folder}layout/previous_message.png') no-repeat;
+        }
+
+        &.next_message a:hover, &.previous_message a:hover {
+            background-color: #f1f1f1;
+        }
+    }
+}
+
+.mail_thread_holder {
+    position: relative;
+
+    .mail_action {
+        top: 0;
+    }
+
+}
+
+#js_mail_thread_current_cnt {
+    display: none;
+}
+
+.mail_thread_user {
+    font-weight: bold;
+    padding-bottom: 4px;
+    width: 85%;
+    overflow: hidden;
+}
+
+.mail_thread_time {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#js_main_mail_thread_holder .global_attachment {
+    border-top: 0;
+}
+
+div.is_last_submessage {
+    border-bottom: 0;
+}
+
+.mail_thread_forward {
+    border-left: 3px #EFEFEF solid;
+    padding-left: 5px;
+    margin-top: 5px;
+
+    .row_title_image {
+        width: 36px;
+    }
+
+    .row_title_info {
+        margin-left: 42px;
+    }
+
+}
+
+#js_main_mail_thread_holder a.global_view_more,
+#js_main_mail_thread_holder a.global_view_more:hover {
+    margin-top: 0;
+}
+
+#js_main_mail_thread_holder .item_bar {
+    padding-bottom: 0;
+}
+
+#mail-pf-loading-message {
+    &:extend(#pf-loading-message all);
+
+    position: relative;
+}
+
+#page_mail_thread {
+    .mail_messages {
+        background: @body-bg;
+        top: 40px;
+        bottom: 65px;
+        overflow: auto;
+        padding: 10px 0;
+    }
+    textarea, textarea:focus {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        border: 0;
+        text-indent: 0;
+        font-size: @font-size-base - 1;
+        background: @block-bg;
+        color: @block-color;
+    }
+    .mail_thread_form_holder_inner {
+        padding: 5px 0;
+    }
+}
+.mail_thread .mail_thread_holder .mail_user_image{
+    width: 50px;
+    height: 50px;
+}
+.mail_text img.parsed_image {
+        max-width: 100%;
+    }

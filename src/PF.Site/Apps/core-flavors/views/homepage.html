@@ -1,0 +1,21 @@
+<div class="fm_row">
+	<div class="fm_row_title">
+		Main Content
+	</div>
+	<textarea name="content" class="fm_content_textarea form-control" data-url="{{ url('/flavors/manage', {id: flavor.id, type: 'content'}) }}">{{ content }}</textarea>
+</div>
+
+<div class="fm_row">
+	<div class="fm_row_title">
+		Banners
+	</div>
+	<div class="fm_uploader">
+		<span><i class="fa fa-upload"></i></span>
+		<input multiple="multiple" type="file" class="ajax_upload" value="Upload" name="logo" accept="image/*" data-url="{{ url('/flavors/manage', {id: flavor.id}) }}&type=homepage">
+	</div>
+</div>
+<div class="fm_banners" data-flavor-id="{{ flavor.id }}">
+	{% for banner in banners %}
+	<div data-src="{{ banner }}" class="image_load"><span><i class="fa fa-remove"></i></span></div>
+	{% endfor %}
+</div>

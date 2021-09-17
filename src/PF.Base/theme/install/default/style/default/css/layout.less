@@ -1,0 +1,164 @@
+
+@import "variables";
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+html{
+	background-color: @installBodyBg
+}
+body {
+	line-height: 1;
+}
+#header{
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.panel {
+	border-radius: 0;
+}
+
+ul.steps {
+	list-style: none none outside;
+	margin: 0 -15px 0 0;
+	padding: 20px 0 20px 0;
+	border-right: 1px solid #ddd;
+
+	li {
+		padding-left: 24px;
+		line-height: 36px;
+		text-transform: capitalize;
+		position: relative;
+	}
+	li + li {
+		border-top: 1px solid #ddd;
+	}
+	li .fa {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+	li.active {
+		font-weight: bold;
+		color: #3c763d;
+	}
+	li.done {
+		//font-weight: bold;
+	}
+	li.active .fa:before {
+		content: "\f0da";
+	}
+}
+
+
+
+.only-upgrade, .only-install {
+	display: none;
+}
+
+.in-install .only-install {
+	display: block;
+}
+
+.in-upgrade .only-upgrade {
+	display: block;
+}
+
+body {
+	background:@installBodyBg;
+	color:@installTextColor;
+	font-family:@installFontFamilyBase;
+	font-size:@installFontSizeBase;
+	line-height:@installLineHeightBase;
+}
+
+#header {
+	height:70px;
+	line-height:70px;
+	text-indent:20px;
+	color:#fff;
+	font-weight:300;
+	font-size:24px;
+	background:lighten(#0c0c0c, 20%);
+	position:relative;
+
+	> span {
+		position:absolute;
+		right:10px;
+		height:70px;
+		line-height:70px;
+		top:0;
+		display:block;
+		color:darken(#fff, 20%);
+		font-size:14px;
+	}
+}
+
+#install_holder {
+	margin:50px auto;
+	max-width:800px;
+	min-height:300px;
+}
+
+#loading{
+	position: absolute;
+	left: 45%;
+	top: 45%;
+}
+#progress_stage{
+	margin-top: 80px;
+}
+
+#installer {
+	text-align:left;
+	position: relative;
+
+	h1{
+		font-size: 125%;
+		padding-bottom: 15px;
+		margin-top: 4px;
+	}
+
+	a.as-text{
+		color: #444;
+	}
+
+	small{
+		font-size: small;
+	}
+
+	.installer-content{
+		padding:25px 20px;
+		margin: 0 0 0 -16px;
+		border-left: 1px solid #ddd;
+		min-height:400px;
+
+	}
+	.process {
+		font-size:@installFontSizeBase + 4;
+		line-height: 200px;
+		height: 250px;
+		position: relative;
+		letter-spacing: 1px;
+		margin-bottom: 20px;
+		background-color: #fff;
+		-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+		box-shadow: 0 1px 1px rgba(0,0,0,.05);
+		border: 1px solid #ddd;
+
+		i {
+			position:absolute;
+			bottom:80px;
+			left:0;
+			right:0;
+			font-size:26px;
+			color:lighten(#808080, 20%);
+		}
+	}
+}

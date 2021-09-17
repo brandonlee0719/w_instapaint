@@ -1,0 +1,6 @@
+{% import '@Theme/macro/form.html' as Form %}
+
+<form method="post" action="{{ url('/fb/email') }}" class="ajax_post form">
+	{{ Form.email('email', _p('Please provide us with an active email to associate with your account'), null, email) }}
+	{{ Form.submit(_p('Submit')) }}
+</form>

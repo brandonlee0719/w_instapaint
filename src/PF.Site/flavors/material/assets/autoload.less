@@ -1,0 +1,79 @@
+@import "variables";
+
+// Body Background
+body{
+    background-color: @body-bg;
+}
+
+// Links
+a{
+    color: @links-color;
+
+    &:hover{
+        color: @links-color-hover;
+    }
+}
+
+// Header
+.sticky-bar{
+    background-color: @header-bg;
+}
+
+// Content
+#main #content-stage,
+.js_feed_view_more_entry_holder 
+.feed-stream-content, 
+.js_feed_comment_border .feed-stream-content, 
+.header-filter-holder,
+div.comment_mini_content_border{
+    background-color: @content-bg;
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: @content-width;
+    }
+}
+
+// Navigation
+
+@media screen and (min-width: 992px){
+    .navbar.main-navigation{
+        background-color: @nav-bg;
+    }
+}
+
+// Input
+.js_box_holder .js_box .form-control,
+.js_box_holder .js_box input[type="text"],
+.form-control,
+textarea,
+.js_box_holder .js_box textarea{
+    background-color: @input-bg;
+    color: @input-color;
+}
+
+// Block
+#main .layout-left, 
+#main .layout-right{
+    .block{
+        background-color: @block-bg;
+        
+        & > .title{
+            color: @block-title-color;
+        }
+
+        & > .content{
+            border-top-color: @block-border-color;
+        }
+    }
+}
+
+// Footer
+#section-footer{
+    background-color: @footer-bg;
+
+    .footer-holder .copyright{
+        color: @footer-color;
+    }
+}

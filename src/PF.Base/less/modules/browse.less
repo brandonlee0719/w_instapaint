@@ -1,0 +1,131 @@
+
+#page_user_browse {
+
+    #site_content {
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    .go_left {
+        float: none;
+        padding: 0;
+        width: auto;
+    }
+
+
+    #panels {
+        position: relative;
+    }
+
+    #browse_custom_fields_popup_holder {
+        .go_left {
+            padding: 15px;
+        }
+
+        .table {
+            margin: 0;
+            background: transparent;
+            padding: 5px 0;
+        }
+    }
+
+    #js_user_browse_advanced.active {
+        display: block;
+    }
+
+    #js_user_browse_advanced {
+        .reset();
+
+        display: none;
+
+        .user_browse_content, #browse_custom_fields_popup_holder {
+            .reset();
+        }
+    }
+
+    #left {
+
+        > ._block > form {
+            display: block;
+        }
+    }
+
+    .user_rows {
+        vertical-align: top;
+        display: inline-block;
+        width: 120px;
+        height: 150px;
+        background: @block-bg;
+        text-align: center;
+        margin-right: 5px;
+        margin-bottom: @padding-base-horizontal;
+        position: relative;
+    }
+
+    .user_browse_user {
+        padding: 0;
+        height: 30px;
+        line-height: 30px;
+        text-indent: 5px;
+        text-align: left;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: @font-size-base - 2;
+        overflow: visible;
+
+        a, a:hover {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .user_browse_user:hover {
+        .user_browse_add_friend {
+            display: block;
+            transition: @transition;
+        }
+    }
+
+    .user_browse_add_friend {
+        display: none;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        line-height: 30px;
+        z-index: 4;
+
+        > img {
+            display: none;
+        }
+
+        > a, > a:hover {
+            text-align: center;
+            display: block;
+            background: @brand-primary;
+            color: @brand-primary-color;
+            text-transform: uppercase;
+            text-indent: 0;
+        }
+    }
+}
+
+#js_block_border_user_filter {
+    .table .table_right {
+        padding-bottom: 0;
+    }
+}

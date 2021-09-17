@@ -1,0 +1,169 @@
+.pages_item ._moderator {
+  border-bottom: none;
+  top: 12px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  background-color: inherit;
+}
+.pages_item a {
+  position: relative;
+}
+.pages_item a:hover {
+  position: relative;
+}
+.pages_item a img {
+  height: auto;
+}
+.pages_item a span.no_image_user {
+  height: 0;
+  padding-bottom: 100%;
+  width: 200px;
+}
+.pages_item .remain_pages {
+  background-color: #848484;
+  color: white;
+  height: 0;
+  padding-bottom: 100%;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.pages_item .remain_pages > span {
+  height: 0;
+  padding-bottom: 100%;
+  width: 100% !important;
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-origin: border-box !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.pages_item .remain_pages > span div.overlay {
+  padding-bottom: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.pages_item .remain_pages > span span {
+  font-size: 40px !important;
+  font-weight: bold !important;
+  margin-top: calc(50% - 28px) !important;
+  position: absolute !important;
+  top: 0;
+}
+.pages-items .js_pager_buttons {
+  width: 100%;
+  padding-left: 10px;
+}
+#js_pages_add_holder .title {
+  display: block !important;
+}
+#js_pages_add_holder .pages_type_add_holder {
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 237px;
+  height: 237px;
+  display: inline-block;
+  cursor: pointer;
+}
+#js_pages_add_holder .pages_type_add_holder > div {
+  position: relative;
+  height: 237px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link > a {
+  display: none;
+  width: 150px;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link:hover > a {
+  display: block;
+  margin: 10px auto;
+  opacity: 1;
+  box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.76), 0 0 0 0 rgba(0, 0, 0, 0.12);
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link:hover > a:hover {
+  text-decoration: underline;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link .pages_type_add_info {
+  margin-top: 10%;
+  height: 66px;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link .pages_type_add_info > span {
+  font-size: 17px;
+}
+#js_pages_add_holder .pages_type_add_holder > div div.pages_type_add_inner_link .pages_type_add_info > div {
+  color: #ccc;
+}
+#js_pages_add_holder div.error_message {
+  margin-bottom: 15px;
+}
+td.widget-actions {
+  position: relative;
+}
+.category-image {
+  padding-bottom: 10px;
+}
+.category-image i {
+  color: white;
+}
+#js_pages_block_url .extra_info {
+  overflow: auto !important;
+}
+.drag-drop-table[data-app="core_pages"] .drag_handle {
+  cursor: move;
+}
+.drag-drop-table[data-app="core_pages"] .drag_handle:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: '\f0dc';
+}
+.drag-drop-table[data-app="core_pages"] .drag_my_class {
+  background-color: #FEFBD9 !important;
+}
+.pages_extra_info a {
+  color: white;
+}
+#page_pages_view ul.emoji-list {
+  z-index: 1;
+}
+.pages-block-members-header h1 {
+  display: inline-block;
+}
+.pages-block-members-header .search-member {
+  padding: 10px 0;
+  position: relative;
+}
+.pages-block-members-header .search-member input {
+  padding-right: 30px;
+}
+.pages-block-members-header .search-member i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 18px 15px;
+}
+.pages-manage-categories td {
+  line-height: 64px !important;
+}
+.pages-manage-categories td .js_item_is_not_active,
+.pages-manage-categories td .js_item_is_active {
+  vertical-align: middle !important;
+}

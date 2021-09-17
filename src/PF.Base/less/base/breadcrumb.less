@@ -1,0 +1,118 @@
+._block_breadcrumb {
+    .clearfix;
+}
+
+.breadcrumbs_menu > ul > li > a {
+    .btn;
+    .btn-danger;
+}
+
+._is_page_view .breadcrumbs_menu {
+    li {
+        a, a:hover {
+            background: transparent;
+        }
+    }
+}
+
+.breadcrumbs .breadcrumbs_menu {
+    position: absolute;
+    right: @block-content-padding;
+    top: @block-content-padding;
+}
+
+.breadcrumbs h1 {
+    padding: 10px 0;
+}
+
+#page_core_index-visitor ._block_breadcrumb {
+    display: none;
+}
+
+.breadcrumbs-holder {
+    .btn {
+        padding: 15px @padding-base-horizontal;
+        text-transform: uppercase;
+
+    }
+}
+
+.breadcrumbs-top {
+    padding-left: @block-content-padding;
+    border-bottom: 1px solid @border-color;
+    margin-bottom: @block-content-padding;
+}
+
+.breadcrumbs-bottom {
+    padding: 0 @block-content-padding;
+    margin-bottom: @padding-base-vertical;
+
+    a {
+        .no-break-word();
+    }
+}
+
+.breadcrumbs-list {
+    a {
+        display: block;
+        color: @block-title-color;
+        font-weight: @block-title-font-weight;
+        font-size: @block-title-size;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    a + a {
+        &:before {
+            content: "\002f";
+            display: inline-block;
+            width: 16px;
+            text-indent: 4px;
+            text-align: center;
+        }
+    }
+
+    &:not(.show-all) {
+        a.breadcrumb-toggle-btn {
+            &:nth-last-child(2), &:last-child {
+                display: none;
+            }
+        }
+
+        a:nth-child(n+4):not(:last-child) {
+            display: none;
+        }
+    }
+
+    &.show-all {
+        a.breadcrumb-toggle-btn {
+            display: none;
+        }
+    }
+}
+[dir="ltr"] .breadcrumbs-list a{  float: left;  }
+[dir="rtl"] .breadcrumbs-list a{  float: right;  }
+.header_bar_menu {
+    padding-top: 0;
+
+}
+
+.header_filter_holder {
+    .inline-block {
+        position: relative;
+        margin-bottom: @block-content-padding;
+        padding-right: 8px;
+    }
+
+    .inline-block:last-child {
+        padding-right: 0;
+    }
+
+    .btn {
+        .button-size(11px; 10px; 12px; @line-height-large; 0);
+        background: @border-color;
+        border-color: transparent;
+    }
+    .dropdown-menu {
+        margin-top: -1px;
+    }
+}

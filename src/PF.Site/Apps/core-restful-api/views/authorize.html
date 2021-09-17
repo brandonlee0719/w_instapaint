@@ -1,0 +1,10 @@
+{% import '@Theme/macro/form.html' as Form %}
+<form method="post"  class="form-group">
+	<div class="table_clear">
+		<h1 class="title">{{ _p('Do You Authorize {{ client_name }} ?', {client_name: aClientInfo.client_name}) }}</h1>
+	</div>
+	<div class="table_clear">
+		<button type="submit" name="authorized" value="yes" class="button btn-primary">{{ _p('Yes') }}</button>
+		<button type="submit" name="authorized" value="no" class="button">{{ _p('No') }}</button>
+	</div>
+</form>

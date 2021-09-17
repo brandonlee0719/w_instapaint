@@ -1,0 +1,63 @@
+.fb_login_go{
+    .h-5;
+    display: flex !important;
+    .items-center();
+    color: #fff;
+    font-size: 14px;
+    margin-top: 0;
+    padding: 0 @grid-point !important;
+    span.ico{
+        .mr-1;
+        font-size: 16px;
+    }
+}
+
+.facebook-login-header{
+    .fb_login_go{
+        color: #fff !important;
+        text-align: center;
+        font-size: 16px;
+        .facebook-login-label{
+            font-size: 14px;
+        }
+    }
+}
+
+//fb in login page
+#page_user_login,#page_user_register{
+    #content{
+        .fb_login_go{
+            width: 250px;
+        }
+    }   
+}
+
+//pop-up
+.js_box_content{
+    .custom_login_fb,.custom_signup_fb{
+        .item-or-line{
+            font-size: 14px;
+            color: @gray-dark;
+            text-transform: uppercase;
+            position: relative;
+            display: flex;
+            justify-content:center;
+            & > span{
+                width: 40px;
+                background: #fff;
+                text-align: center;
+                display: block;
+                z-index: 1;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: @border-color-light;
+                bottom: 50%;
+            }
+        }
+    }
+}

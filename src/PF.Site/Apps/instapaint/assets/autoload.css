@@ -1,0 +1,21 @@
+/*Style top border on pager tables*/
+
+table.pager-table {
+    border-top: none;
+}
+
+table.pager-table tr:first-child td {
+    border-top: none;
+}
+
+div#js_block_border_apps_core_photos_block_myphoto {
+    padding: 0 15px 5px 15px;
+}
+
+div#content-stage {
+    min-height: unset !important;
+}
+
+.add_as_friend_button {
+    display: none !important;
+}

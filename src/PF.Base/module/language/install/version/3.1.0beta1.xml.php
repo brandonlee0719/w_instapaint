@@ -1,0 +1,15 @@
+<upgrade>
+	<settings>
+		<setting>
+			<group>language</group>
+			<module_id>language</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>auto_detect_language_on_ip</var_name>
+			<phrase_var_name>setting_auto_detect_language_on_ip</phrase_var_name>
+			<ordering>2</ordering>
+			<version_id>3.1.0beta1</version_id>
+			<value>0</value>
+		</setting>
+	</settings>
+</upgrade>

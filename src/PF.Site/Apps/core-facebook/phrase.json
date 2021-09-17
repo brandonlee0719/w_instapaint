@@ -1,0 +1,12 @@
+{
+  "Facebook Login Enabled" : "",
+  "Facebook Application ID" : "",
+  "Facebook App Secret" : "",
+  "Require Email" : "",
+  "notice_uppercase": "Notice",
+  "you_just_signed_up_successfully_with_email_email": "You just signed up successfully with email: {email}",
+  "click_here_to_change_your_password": "Click <a href=\"{link}\">here</a> to change your password.",
+  "facebook_app": "Facebook Connect",
+  "sign_in_with_facebook": "Sign In with Facebook",
+  "sign_up_with_facebook": "Sign Up with Facebook"
+}

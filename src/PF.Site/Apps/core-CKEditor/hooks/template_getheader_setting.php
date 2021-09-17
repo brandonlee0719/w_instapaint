@@ -1,0 +1,2 @@
+<?php
+$aJsVars['sEditor'] = 'CKEditor';

@@ -1,0 +1,34 @@
+<?php
+defined('PHPFOX') or exit('NO DICE!');
+
+/**
+ * Class User_Component_Block_Custom
+ */
+class User_Component_Block_Custom extends Phpfox_Component
+{
+	/**
+	 * Controller
+	 */
+	public function process()
+	{
+		$this->setParam('aUser', array(
+				'user_id' => $this->request()->get('user_id'),
+				'user_group_id' => $this->request()->get('user_group_id')
+			)
+		);
+		
+		$this->template()->assign(array(
+				'aSettings' => Phpfox::getService('custom')->getForEdit(array('user_main', 'user_panel', 'profile_panel'), $this->request()->get('user_id'), $this->request()->get('user_group_id'))
+			)
+		);
+	}
+	
+	/**
+	 * Garbage collector. Is executed after this class has completed
+	 * its job and the template has also been displayed.
+	 */
+	public function clean()
+	{
+		(($sPlugin = Phpfox_Plugin::get('user.component_block_custom_clean')) ? eval($sPlugin) : false);
+	}
+}

@@ -1,0 +1,4 @@
+<?php
+
+define('CDN_FOLDER', './file/');
+define('CDN_KEY', '');

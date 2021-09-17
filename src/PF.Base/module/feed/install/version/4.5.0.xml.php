@@ -1,0 +1,28 @@
+<upgrade>
+    <user_group_settings>
+        <setting>
+            <is_admin_setting>0</is_admin_setting>
+            <module_id>feed</module_id>
+            <type>boolean</type>
+            <admin>1</admin>
+            <user>1</user>
+            <guest>0</guest>
+            <staff>1</staff>
+            <module>feed</module>
+            <ordering>0</ordering>
+            <value>can_edit_own_user_status</value>
+        </setting>
+        <setting>
+            <is_admin_setting>0</is_admin_setting>
+            <module_id>feed</module_id>
+            <type>boolean</type>
+            <admin>1</admin>
+            <user>0</user>
+            <guest>0</guest>
+            <staff>1</staff>
+            <module>feed</module>
+            <ordering>0</ordering>
+            <value>can_edit_other_user_status</value>
+        </setting>
+    </user_group_settings>
+</upgrade>

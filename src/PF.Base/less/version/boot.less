@@ -1,0 +1,293 @@
+@import "4.2.0";
+@import "4.3.0";
+@import "4.3.1";
+@import "4.4.0";
+
+#js_main_debug_holder {
+    margin-top: 500px;
+
+    #n_debug {
+        margin: 0;
+        width: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        z-index: 100000000;
+        padding-top: 50px;
+    }
+
+    #n_debug_header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-weight: 200;
+        height: 50px;
+        line-height: 50px;
+        background: #0c0c0c;
+        color: #fff;
+        font-size: 18px;
+        padding: 0;
+
+        > a {
+            display: none;
+        }
+    }
+
+    .nDebugContent {
+        height: auto !important;
+        overflow: visible;
+        border: 0;
+    }
+
+    .nDebugItem {
+        background: darken(#fff, 5%);
+        color: #808080 !important;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        a, a:hover {
+            color: #808080 !important;
+        }
+    }
+
+    ._debug_content {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        font-size: 13px;
+        font-family: monospace;
+    }
+}
+
+.header-right-menu .btn-abr {
+	> span {
+		background-color:#ee5454;
+		color:white;
+		display:none;
+		font-size:smaller;
+		left:13px;
+		line-height:20px;
+		min-width:20px;
+		padding:0;
+		position:absolute;
+		text-align:center;
+		top:-11px;
+	}
+}
+
+._is_groups_view {
+	._block_top {
+		display:none;
+	}
+
+	.profiles_banner {
+		margin:0;
+		max-height:none;
+		min-height:0;
+	}
+
+	.profile_image {
+		position:static;
+		height:270px;
+		width:100%;
+		background:lighten(#0c0c0c, 10%);
+		border:0;
+
+		.no_image_user {
+			display:none;
+		}
+	}
+
+	.cover_shadown {
+		display:none;
+	}
+
+	.profiles_owner_actions {
+		top:auto;
+		bottom:45px;
+	}
+
+	.pages_like_join, .js_claim_page {
+		display:block;
+	}
+
+	.profiles_banner_bg > .cover_bg {
+		position:static;
+		height:250px;
+	}
+
+	.profiles_extra_info {
+		font-size:12px;
+	}
+
+	.profiles_banner_bg .cover {
+		max-height:none;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		height:250px;
+	}
+
+	.profiles_banner .cover > img {
+		height:250px;
+		background-size:cover;
+	}
+
+	.profiles_info {
+		padding-left:10px;
+		position:absolute;
+		top:5px;
+		left:0;
+		right:0;
+		bottom:auto;
+		z-index:100;
+	}
+
+	.profile_viewer_actions {
+		position:static;
+		left:0;
+		right:0;
+
+		.pages_like_join, .js_claim_page {
+			border:0;
+		}
+	}
+
+	.profiles_menu {
+		height:auto;
+		padding:5px 0;
+		margin-top:20px;
+		background:#fff;
+
+		> ul {
+			margin:0;
+			padding:0;
+
+			> li {
+				display:block;
+				height:30px;
+				line-height:30px;
+				border:0;
+				vertical-align:middle;
+				margin:0;
+
+				> a, > a:hover {
+					vertical-align:middle;
+					height:30px;
+					line-height:30px;
+					padding:0 0 0 15px;
+					display:block;
+					font-size:14px;
+				}
+			}
+		}
+	}
+}
+
+._is_group_browse {
+	#js_block_border_pages_category {
+		display:none;
+	}
+}
+
+#page_pages_add._is_groups_view {
+	.page_section_menu_header {
+		padding:0;
+	}
+
+	#content {
+		> ._block_error {
+			position:absolute;
+			left:10px;
+			top:-4px;
+			background:darken(#fff, 4%);
+			width:18%;
+			overflow:hidden;
+
+			.nav-tabs.nav-justified {
+				margin:0;
+				padding:0;
+			}
+
+			.nav-tabs.nav-justified > li {
+				display:block;
+				width:auto;
+				text-align:left;
+
+				> a, > a:hover {
+					text-align:left;
+				}
+			}
+		}
+
+		> ._block_content {
+			vertical-align:top;
+			margin-left:20%;
+			min-height:400px;
+		}
+	}
+}
+
+.group_members {
+	padding-top:5px;
+	font-size:12px;
+	text-transform:uppercase;
+
+	> span {
+		opacity:0.4;
+	}
+
+	> ul {
+		padding-top:5px;
+
+		> li {
+			display:inline-block;
+			vertical-align:top;
+		}
+	}
+}
+
+.global_attachment ul.global_attachment_list li a.active,
+.global_attachment ul.global_attachment_list li a.active:hover,
+.global_attachment ul.global_attachment_list li a.active i::before,
+.global_attachment ul.global_attachment_list li a.active:hover i::before {
+	color:#fff !important;
+	background:#5f5f5f;
+	border:0;
+}
+
+.group_info {
+	border-top:1px #dfdfdf solid;
+	margin-top:20px;
+	padding-top:10px;
+}
+
+.group-events {
+	h1 {
+		margin:0 0 10px 0;
+		padding:0;
+		font-size:18px;
+	}
+}
+
+#admin_demo_message {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1000000000;
+	background:red;
+	color:#fff;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	margin-bottom:-70px;
+}

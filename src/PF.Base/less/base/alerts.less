@@ -1,0 +1,139 @@
+div.message, div.error_message, .valid_message, div.public_message {
+    background: @brand-info;
+    color: @brand-primary-color;
+    font-size: @font-size-base + 2;
+    font-weight: 400;
+    padding: @block-content-padding;;
+    border: 0;
+    a, a:hover {
+        color: @brand-primary-color;
+        font-weight: 600;
+        font-size: @font-size-base - 2;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    a:hover {
+        transition: @transition;
+        opacity: 0.6;
+    }
+}
+
+div.error_message {
+    background: @brand-danger;
+
+    > button.button {
+        margin-top: 10px;
+        text-transform: uppercase;
+        display: block;
+    }
+}
+
+.js_custom_core_message {
+    > button.button {
+        text-transform: uppercase;
+        display: block;
+    }
+}
+
+.valid_message {
+    background: @brand-success;
+}
+
+div.public_message {
+    .reset();
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: -50px;
+    display: none;
+    z-index: 1000000;
+    background: fade(#2ecc71, 80%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    &[data-auto-close="true"] {
+        .ico-close-circle-o {
+            display: none;
+        }
+    }
+
+    span {
+        display: inline-block;
+    }
+    span.ico-close-circle-o {
+        cursor: pointer;
+        margin: 0 15px;
+        font-size: 23px;
+        line-height: 50px;
+        [dir="ltr"] & {
+            float: right;
+        }
+        [dir="rtl"] & {
+            float: left;
+        }
+    }
+}
+
+div.public_message_primary {
+    background: fade(#337ab7, 80%);
+}
+
+div.public_message_info {
+    background: fade(#269abc, 80%);
+}
+
+div.public_message_warning {
+    background: fade(#d58512, 80%);
+}
+
+div.public_message_danger {
+    background: fade(#ac2925, 80%);
+}
+
+.ajax_processing {
+    position: fixed;
+    top: 5px;
+    right: 0;
+    z-index: 100000000;
+    height: @header-height;
+    text-align: right;
+    left: auto;
+    i {
+        display: inline-block;
+        font-size: 20px;
+        color: @brand-primary;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.pf-alert-wrapper {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    z-index: 2;
+    opacity: 0.9;
+
+    .slide-down-alert {
+        margin: 0;
+    }
+}
+
+div.public_message{
+    span.ico{
+        padding: 0;
+        margin: 0;
+        .items-center();
+        .square(50px);
+        &:before{
+            content: "\eab2";
+            font-size: 18px;
+        }
+    }
+}

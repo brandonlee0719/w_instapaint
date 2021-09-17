@@ -1,0 +1,22 @@
+<?php
+$this->template()->setPhrase([
+    'yesterday',
+    'january',
+    'february',
+    'march',
+    'april',
+    'may',
+    'june',
+    'july',
+    'august',
+    'september',
+    'october',
+    'november',
+    'december',
+    'sending_dot_dot_dot',
+    'just_now',
+    'a_minute_ago',
+    'minutes_ago',
+    'a_hour_ago',
+    'hours_ago',
+]);

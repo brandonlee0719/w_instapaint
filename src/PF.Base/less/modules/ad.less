@@ -1,0 +1,124 @@
+
+#js_sample_multi_ad_holder {
+    .reset();
+
+    width: @column-width;
+    background: @block-bg;
+}
+
+.ad_unit_holder_title {
+    .reset();
+
+    background: @block-title-bg;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: @font-size-base - 1;
+}
+
+
+.ad_unit_multi_ad_title {
+    color: @link-focus;
+}
+
+.ad_unit_multi_ad_text, .ad_unit_multi_ad_url {
+    color: @block-color;
+}
+
+.ad_unit_multi_ad_url {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#left, #right {
+    #js_block_border_ad_display.block {
+        > .content {
+            background: @block-bg;
+        }
+    }
+}
+
+#page_ad_add, #page_music_upload {
+    #panels {
+        display: none;
+    }
+}
+
+.ad_is_fixed {
+    #js_block_border_ad_display {
+        position: fixed;
+        top: @header-height + 5;
+    }
+}
+
+.ad_unit_multi_ad_image{
+    width: 100%;
+    margin-bottom: @grid-point/2;
+    .ad-media{
+        width: 100%;
+        .bg-img-ratio(50%,block);
+    }
+    .no_image_item{
+        width: 100%;
+        .bg-img-ratio(50%,block);
+        background:@gray-light;
+    }
+}
+.multi_ad_holder{
+    margin-top: @grid-point + @grid-point/2;
+    width: 100%;
+    &:first-child{
+        margin-top: 0;
+        .ad_unit_multi_ad{
+            border-top: 0;
+            padding-top: 0 !important;
+        }
+    }
+    .ad_unit_multi_ad{
+        display: flex;
+        flex-direction:column;
+        border-top: 1px solid @border-color-light;
+        border-bottom: 0;
+        padding-top: @grid-point + @grid-point/2 !important;
+    }
+}
+.ad_multi_container{
+    display: flex;
+    flex-direction:column;
+    flex-flow:wrap;
+    @media (max-width:767px) and (min-width:480px){
+        flex-direction:row;
+        margin: 0 -@grid-point;
+        .multi_ad_holder{
+            width: 50%;
+            padding: 0 @grid-point;
+            &:nth-child(2){
+                margin-top: 0;
+                .ad_unit_multi_ad{
+                    padding-top: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.ad_unit_multi_ad_content{
+    .ad_unit_multi_ad_title{
+        .truncateLines(14px,19px,2,false);
+        color: @brand-primary;
+        margin-bottom: @grid-point/4;
+    }
+    .ad_unit_multi_ad_url{
+        .fz-lh(12px);
+        .truncate-1();
+        color: @text-color;
+        margin-bottom: @grid-point/4;
+    }
+    .ad_unit_multi_ad_text{
+        color: @gray-dark;
+        .truncateLines(12px,16px,3,false);
+    }
+}

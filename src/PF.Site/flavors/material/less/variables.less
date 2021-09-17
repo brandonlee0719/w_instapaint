@@ -1,0 +1,286 @@
+//Grid 8px
+@grid-point: 8px;
+@counts: 8;
+
+@block-spacing: @grid-point*2;
+
+@use-border-radius: false;
+@use-block-box: true;
+@hover-categories: false;
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+@border-radius-large: 0;
+@btn-border-radius-base: 0;
+@btn-border-radius-small: 0;
+@use-form-control-focus: true;
+@use-form-control-shadown: false;
+
+//Border color
+@border-color: @gray-light;
+@border-color-light: @gray-lighter;
+@border-color-lighter: @gray-lightest;
+@border-color-dark: @gray;
+
+@grid-gutter-width: 2*@block-content-padding;
+@block-content-padding: @grid-point;
+
+@padding-large-vertical: 14px;
+@padding-large-horizontal: @block-content-padding;
+@padding-base-vertical: 9px;
+
+@link-hover-decoration: none;
+@dropdown-link-color: @block-color;
+@font-size-large: @font-size-base;
+@navbar-default-bg: #feffff;
+@navbar-default-link-active-bg: #848586;
+@navbar-default-link-active-color: white;
+@navbar-default-link-hover-bg: #f4f5f6;
+
+@grid-float-breakpoint: @screen-md-min;
+
+@navbar-default-toggle-border-color: transparent;
+@navbar-default-toggle-icon-bar-bg: white;
+
+@dropdown-line-height: 40px;
+@dropdown-link-active-bg: darken(@dropdown-link-hover-bg, 10%);
+@dropdown-link-active-color: @text-color;
+
+@list-group-border: @block-border;
+@btn-border-focus-revelant: 0;
+@btn-border-hover-revelant: 0;
+@header-height: 40px;
+@header-font-size: @font-size-base - 1;
+@menu-action-line-height: 50px;
+@row-border-color: darken(@block-bg, 6%);
+
+
+//== Main
+@logoUrl: ''; // Logo
+
+
+//== Containers
+@container-max-width: 920px; // Container/Holder width !hide
+@container-max-width-full: 1190px; // Max Width
+@container-bg:              transparent; // Background color for container | color !hide
+@content-width: 600px; // !hide
+
+////== Helpers
+@transition:                all 0.50s ease; // !hide
+@border-radius-base:        0; // !hide
+@separator: "\00b7";  // !hide
+@box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); //!hide
+
+//== Links
+@link-color: @brand-primary;
+@link-hover-color:           darken(@link-color, 15%);
+
+@link-focus: #555;
+@link-focus-hover: @brand-primary;
+
+//== Brand
+@brand-primary-color:   #fff;
+@brand-primary:         #2681D5; // Brand primary
+@brand-success:         #47C366;
+@brand-info:            #6895B5;
+@brand-warning:         #FFAB00;
+@brand-danger:          #EE5A2B;
+
+//== Brand light
+@brand-primary-light:           lighten(@brand-primary, 10%);
+@brand-success-light:           lighten(@brand-success, 10%);
+@brand-info-light:              lighten(@brand-info, 10%);
+@brand-warning-light:           lighten(@brand-warning, 10%);
+@brand-danger-light:            lighten(@brand-danger, 10%);
+
+//== Brand lighter
+@brand-primary-lighter:         lighten(@brand-primary, 35%);
+@brand-success-lighter:         lighten(@brand-success, 35%);
+@brand-info-lighter:            lighten(@brand-info, 35%);
+@brand-warning-lighter:         lighten(@brand-warning, 35%);
+@brand-danger-lighter:          lighten(@brand-danger, 35%);
+
+
+//== Brand lightest
+@brand-primary-lightest:         lighten(@brand-primary, 47.5%);
+@brand-success-lightest:         lighten(@brand-success, 43%);
+@brand-info-lightest:            lighten(@brand-info, 43%);
+@brand-warning-lightest:         lighten(@brand-warning, 43%);
+@brand-danger-lightest:          lighten(@brand-danger, 43%);
+
+
+//== Brand dark
+@brand-primary-dark:            darken(@brand-primary, 10%);
+@brand-success-dark:            darken(@brand-success, 10%);
+@brand-info-dark:               darken(@brand-info, 10%);
+@brand-warning-dark:            darken(@brand-warning, 10%);
+@brand-danger-dark:             darken(@brand-danger, 10%);
+
+
+//== Brand darker
+@brand-primary-darker:            darken(@brand-primary, 20%);
+@brand-success-darker:            darken(@brand-success, 20%);
+@brand-info-darker:               darken(@brand-info, 20%);
+@brand-warning-darker:            darken(@brand-warning, 20%);
+@brand-danger-darker:             darken(@brand-danger, 20%);
+
+
+//Gray scales
+//Lighten from #000000
+@gray-base:              #000; // hide
+@gray-darker:            lighten(@gray-base, 33.5%);; // !hide
+@gray-dark:              lighten(@gray-base, 63.5%);;   // !hide
+@gray:                   lighten(@gray-base, 78.5%);; // !hide
+@gray-light:             lighten(@gray-base, 86.2%); // !hide
+@gray-lighter:           lighten(@gray-base, 93.5%); // !hide
+@gray-lightest:          lighten(@gray-base, 97.2%); // !hide
+
+
+@font-family-base:          Helvetica, 'Roboto', Arial, sans-serif;// Font family
+@font-size-base:            14px; // Base font size | size
+@input-color: #555;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #f0f3f5;
+//** Global text color on `<body>`.
+@text-color:            #555;
+
+@block-title-color: #555;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: none;
+
+@block-border: #ddd;
+///== Columns
+@column-left-width: 250px; //!hide
+@column-width: 300px; //!hide
+
+//== Navs
+@nav-bg: #fff;
+@nav-color: lighten(#808080, 10%);
+@nav-width: 200px; // !hide
+
+
+
+//== Header
+@header-bg: @brand-primary;
+@header-color: #e5e5e5;
+
+//== Blocks
+@block-bg:                  #fff;
+@block-color:               #555;
+@block-radius: @border-radius-base; //!hide
+@block-margin-bottom:       20px;
+@block-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4); // !hide
+@block-box-shadow-light: 0 0 20px 0 rgba(0, 0, 0, 0.2);// !hide
+
+
+@block-title-padding: 10px;// !hide
+@block-title-bg: #555; // block title color
+@block-title-size: 22px;
+@block-title-size-mobile: 18px;
+@block-title-font-weight: 400; // block title font weight
+
+@block-content-padding: @grid-point * 2;
+@block-content-size: @font-size-base; // !hide
+@hover-categories: true; // !hide
+@block-padding-vertical: 15px;
+
+//== Forms
+@form-bg: @block-bg; // !hide
+@form-color: @block-color; // !hide
+@form-border: 1px transparent solid; // !hide
+
+@row-border-color: #eee;
+@input-border: @gray;
+@use-block-box: 		true; // !hide
+@use-border-radius: true; // !hide
+@use-input-outline: true; // !hide
+@form-control-border: 1px solid @input-border; // !hide
+@input-height-base: 32px;
+@input-border-radius: @grid-point/2px;
+
+
+@footer-bg: #1a1a1a;
+@footer-holder-bg: @footer-bg;
+@footer-color: darken(@body-bg,40%);
+@footer-hover-color: @body-bg;
+@dropdown-line-height: 30px;
+
+@time-font-color: @gray-dark;
+@time-font-size: @font-size-base - 2;
+
+@btn-gray-bg: darken(@block-bg, 8%);
+@btn-gray-color: darken(@block-bg, 26%);
+
+@line-gray-color: darken(@block-bg, 10%);
+
+@item-title-size: 22px;
+@item-title-listing-size: 18px;
+@item-title-weight: 600;
+@item-title-color: #555;
+
+@wrapper-gray-bg: darken(@block-bg, 3%);
+
+
+//Variables for Material Template
+@drop-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+@border-rgba: rgba(0,0,0,0.1);
+
+//Alert
+@alert-padding: @grid-point+4;
+@alert-border-radius: @grid-point/2;
+@line-height-computed: @grid-point*2;
+
+//Success
+@alert-success-bg: @brand-success-lighter;
+@alert-success-border: fade(@brand-success, 10%);
+@alert-success-text: @text-color;
+
+//Info
+@alert-info-bg: @brand-primary-lighter;
+@alert-info-border: fade(@brand-primary, 10%);
+@alert-info-text: @text-color;
+
+//Warning
+@alert-warning-bg: @brand-warning-lighter;
+@alert-warning-border: fade(@brand-warning, 10%);
+@alert-warning-text: @text-color;
+
+//Danger
+@alert-danger-bg: @brand-danger-lighter;
+@alert-danger-border: fade(@brand-danger, 10%);
+@alert-danger-text: @text-color;
+
+@radius: 4px; 
+@radius-lg: 6px; 
+@radius-sm: 4px; 
+@radius-xs: 2px; 
+@radius-circle: 100%;
+
+@btn-radius: @radius; 
+@btn-radius-lg: @radius-lg; 
+@btn-radius-sm: @radius-sm; 
+@btn-radius-xs: @radius-xs; 
+
+
+
+
+.block-effect(){
+    border-radius: @radius-lg;
+    background-color: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: @screen-xs-min){
+      border-radius: 0;
+    }
+  }

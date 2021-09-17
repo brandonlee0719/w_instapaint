@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+	<div class="table-responsive">
+		<table class="table table-admin">
+			<thead>
+			<tr>
+				<th style="width:20px"></th>
+				<th>{{ _p('Upload URL') }}</th>
+				<th>{{ _p('View URL') }}</th>
+				<th>{{ _p('Key') }}</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% for server in servers %}
+			<tr>
+				<td class="t_center">
+					<a href="#" class="js_drop_down_link"></a>
+					<div class="link_menu">
+						<ul>
+							<li><a href="{{ url('/pfcdn/acp/server', {id: server.id}) }}" class="popup">{{ _p('Edit') }}</a></li>
+							<li><a href="{{ url('/pfcdn/acp/server/delete', {id: server.id}) }}" class="sJsConfirm">{{ _p('Delete') }}</a></li>
+						</ul>
+					</div>
+				</td>
+				<td>{{ server.value.upload }}</td>
+				<td>{{ server.value.url }}</td>
+				<td>{{ server.value.key }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+	</div>
+</div>

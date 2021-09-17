@@ -1,0 +1,15 @@
+<upgrade>
+    <settings>
+        <setting>
+            <group>general</group>
+            <module_id>core</module_id>
+            <is_hidden>0</is_hidden>
+            <type>boolean</type>
+            <var_name>show_addthis_section</var_name>
+            <phrase_var_name>setting_show_addthis_section</phrase_var_name>
+            <ordering>1</ordering>
+            <version_id>4.6.0</version_id>
+            <value>1</value>
+        </setting>
+    </settings>
+</upgrade>

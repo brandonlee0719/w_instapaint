@@ -1,0 +1,158 @@
+
+/*=============================================
+=            STRUCTURE LAYOUT            =
+=============================================*/
+@media (min-width: @screen-lg-min){
+	.container {
+		width: 1200px;
+	}
+}
+
+//Remove padding when max-width 480px
+@media (max-width: @screen-xs-min){
+	#main{
+		.container{
+			.pl-0;
+			.pr-0;
+
+			.row{
+				.ml-0;
+				.mr-0;
+			}
+		}
+	}
+}
+
+//Variable of width column left and column right: ;
+@with-col-lr: @grid-point*29;
+.layout-main{
+	.clearfix;
+
+	#left.layout-left{
+		width: @with-col-lr;
+		float: left;
+
+		html[dir='rtl'] &{
+			float: right;
+			padding: 0;
+		}
+	}
+
+	#content-holder.layout-middle{
+		.mx-3;
+		width: calc(100% ~"-" @with-col-lr*2+@grid-point*6);
+		float: left;
+
+		html[dir='rtl'] &{
+			float: right;
+		}
+	}
+
+	#right.layout-right{
+		width: @with-col-lr;
+		float: right;
+
+		html[dir='rtl'] &{
+			float: left;
+			padding: 0;
+		}
+	}
+
+	//Layout when on mobile < 992px
+	@media (max-width: @screen-sm-max){
+		#content-holder.layout-middle{
+			width: calc(100% ~"-" @with-col-lr+@grid-point*3);
+			.mr-3;
+			.ml-0;
+		}
+
+		#left.layout-left{
+			.mb-2;
+			float: right;
+			html[dir='rtl'] &{
+				float: left;
+			}
+		}
+
+		#right.layout-right{
+			float: right;
+			clear: right;
+			html[dir='rtl'] &{
+				float: left;
+				clear: left;
+			}
+		}
+	}
+
+	//Layout when on mobile > 768px
+	@media (max-width:@screen-xs-max){
+		display: flex;
+		flex-direction: column;
+
+		#content-holder.layout-middle{
+			width: 100%;
+			.mb-2;
+			order: -1;
+			.mr-0;
+		}
+
+		#left.layout-left,
+		#right.layout-right{
+			width: 100%;
+		}
+	}
+}
+
+//When empty layout right
+.empty-right{
+	.layout-main #content-holder.layout-middle{
+		width: calc(100% ~"-" @with-col-lr + @grid-point*3);
+		.mr-0;
+
+		@media (max-width: @screen-sm-max){
+			margin-right: @grid-point*3;
+
+			html[dir='rtl'] &{
+				margin-right: 0;
+				margin-left: @grid-point*3;
+			}
+		}
+
+		@media (max-width:@screen-xs-max){
+			width: 100%;
+		}
+	}
+}
+
+//When empty layout left
+.empty-left{
+	.layout-main #left.layout-left{
+		.mb-0;
+	}
+
+	.layout-main #content-holder.layout-middle{
+		width: calc(100% ~"-" @with-col-lr + @grid-point*3);
+		.ml-0;
+
+		@media (max-width: @screen-sm-max){
+			.mr-3;
+		}
+
+		@media (max-width:@screen-xs-max){
+			width: 100%;
+		}
+	}
+}
+
+
+//When empty layout left and layout right
+.empty-right.empty-left{
+	.layout-main #content-holder.layout-middle{
+		width: 100%;
+		.m-0;
+		float: none;
+	}
+}
+
+
+/*=====  End of STRUCTURE LAYOUT  ======*/

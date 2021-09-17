@@ -1,0 +1,103 @@
+/*=================================
+=            core poke            =
+=================================*/
+
+.core_poke_item{
+	.item-outer{
+		display: flex;
+		align-items: center;
+		&:hover{
+			.poke-delete{
+				opacity: 1 !important;
+			}
+		}
+		.item-media{
+			.square(40px);
+			position: relative;
+
+			.poke-delete{
+				position: absolute;
+				font-size: 8px;
+				.s-3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: @text-color;
+				border-radius: 100%;
+				top: 0;
+				left: -@grid-point;
+				background-color: #fff;
+				box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+				padding-left: 1px;
+				opacity: 0;
+				.transition(all 300ms ease);
+				@media (max-width:1024px){
+					opacity: 1;
+				}
+				html[dir='rtl'] &{
+					left: auto;
+					right: -@grid-point;
+					padding-left: 0;
+					padding-right: 1px;
+				}
+			}
+		}
+
+		.item-inner{
+			margin-left: @grid-point + 4;
+		    flex: 1;
+		    position: relative;
+		    overflow: hidden;
+		    padding-right: @grid-point*2;
+
+			.user_profile_link_span{
+				.text-overflow();
+				display: block;
+
+				&,a{
+					font-weight: normal !important;
+					color: @link-color !important;
+
+					&:hover{
+						color: @link-hover-color !important;
+					}
+				}
+			}
+
+			.poke-back{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				font-size: 16px;
+				transform: translateY(-50%);
+			    line-height: normal;
+
+			    html[dir='rtl'] &{
+			    	right: auto;
+			    	left: 0;
+			    }
+			}
+
+			html[dir='rtl'] &{
+				margin-left: 0;
+				margin-right: @grid-point + 4;
+				padding-right: 0;
+				padding-left: @grid-point*2;
+			}
+		}
+	}
+
+	& + .core_poke_item{
+		margin-top: @grid-point;
+		padding-top: @grid-point;
+		border-top: 1px solid @gray-lighter;
+	}
+}
+.popup-poke-content{
+	.poke-user{
+		font-weight: bold;
+		html[dir='rtl'] &{
+			display: inline-block;
+		}
+	}
+}

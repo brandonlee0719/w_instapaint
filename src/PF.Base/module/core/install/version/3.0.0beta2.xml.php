@@ -1,0 +1,37 @@
+<upgrade>
+	<phpfox_update_settings>
+		<setting>
+			<group>server_settings</group>
+			<module_id>core</module_id>
+			<is_hidden>1</is_hidden>
+			<type>boolean</type>
+			<var_name>load_jquery_from_google_cdn</var_name>
+			<phrase_var_name>setting_load_jquery_from_google_cdn</phrase_var_name>
+			<ordering>11</ordering>
+			<version_id>2.1.0Beta1</version_id>
+			<value>0</value>
+		</setting>
+		<setting>
+			<group>server_settings</group>
+			<module_id>core</module_id>
+			<is_hidden>1</is_hidden>
+			<type>string</type>
+			<var_name>jquery_google_cdn_version</var_name>
+			<phrase_var_name>setting_jquery_google_cdn_version</phrase_var_name>
+			<ordering>12</ordering>
+			<version_id>2.1.0Beta1</version_id>
+			<value>1.4.4</value>
+		</setting>
+		<setting>
+			<group>server_settings</group>
+			<module_id>core</module_id>
+			<is_hidden>1</is_hidden>
+			<type>string</type>
+			<var_name>jquery_ui_google_cdn_version</var_name>
+			<phrase_var_name>setting_jquery_ui_google_cdn_version</phrase_var_name>
+			<ordering>13</ordering>
+			<version_id>2.1.0Beta1</version_id>
+			<value>1.8.7</value>
+		</setting>
+	</phpfox_update_settings>
+</upgrade>

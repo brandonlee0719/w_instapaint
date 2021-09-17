@@ -1,0 +1,127 @@
+/*========================================
+=            All Notification            =
+========================================*/
+#js_notification_holder{
+	.notification_holder{
+		.notification_date:not(:first-child){
+			.mt-2;
+		}
+		.all-notification-item {
+			margin: 0 -16px;
+			.px-2;
+			height: @grid-point*11;
+			display: flex;
+			align-items:center;
+			position: relative;
+			.transition(all 300ms ease);
+
+			&.is_new{
+				background: lighten(@brand-primary, 43%) ;
+			}
+
+			&:hover{
+				@media (min-width: @screen-md-min){
+					background: @gray-lightest;
+				}
+			}
+
+			&:before{
+				content: "";
+				height: 1px;
+				position: absolute;
+				left: @grid-point*2;
+				right: @grid-point*2;
+				bottom: 0;
+				background: @border-color;
+			}
+
+			.item-outer{
+				display: flex;
+				width: 100%;
+
+				.item-avatar{
+					margin-right: @grid-point+4;
+					min-width: @grid-point*7;
+
+					.no_image_user,
+					.img-wrapper{
+						.s-7;
+					}
+
+					html[dir='rtl'] &{
+						margin-right: 0;
+						margin-left: @grid-point+4;
+					}
+				}
+				.item-inner{
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					flex: 1;
+
+					.main_link{
+						.truncateLines(14px,19px,2,false);
+						color: @gray-dark;
+						background: none;
+
+						.drop_data_user{
+							font-weight: bold;
+							color: @gray-darker;
+							.fz-lh(14px);
+
+							html[dir='rtl'] &{
+								display: inline-block;
+							}
+						}
+					}
+					.extra_info{
+						.fz-lh(12px);
+						color: @gray;
+					}
+					.main-link-bg-click{
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+					}
+				}
+				.notification_delete{
+					position: absolute;
+					top: @grid-point;
+					.r-1;
+
+					& > a{
+						color: @gray-dark;
+						font-size: 10px;
+						.s-3;
+						.items-center();
+					}
+
+					@media (max-width:@screen-sm-max){
+						display: block !important;
+						position: static;
+					}
+				}
+			}
+		}
+	}
+	.table_clear_button{
+		position: absolute;
+		.r-0;
+		top: -60px;
+
+		input{
+			background: none;
+			color: @brand-primary;
+
+			&:focus{
+				background: none !important;
+				border: 0 !important;
+				outline: none;
+			}
+		}
+	}
+}
+
+/*=====  End of All Notification  ======*/

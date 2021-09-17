@@ -1,0 +1,53 @@
+{% if package_id and not(expired) %}
+<div class="pf_im_hosting_announcement">
+    <span>phpFox IM hosting: 100 active connections.</span>
+    <span>Status: <span id="pf_im_hosting_status">{% if status == 'on' %}On{% else %}Off{% endif %}</span>.</span>
+    <p>Click button below to turn on/off hosting.</p>
+    <a href="#" class="btn btn-primary" id="pf_im_toogle_hosting">Turn {% if status and status == 'on' %}Off{% else %}On{% endif %}</a>
+</div>
+<script>
+    $(document).on('click', '#pf_im_toogle_hosting', function (evt) {
+        var t = $(this),
+            status = $('#pf_im_hosting_status');
+        if (status.text() === 'On') {
+            status.html('Off');
+            t.text('Turn On');
+        } else {
+            status.html('On');
+            t.text('Turn Off');
+        }
+        $.ajaxCall('im.toogleHosting', 'status=' + status.text());
+    });
+</script>
+{% else %}
+    {% if no_hosting %}
+
+    {% else %}
+    <div class="pf_im_hosting">
+        {% if expired %}
+        <div class="alert alert-danger">Your IM hosting package was expired.</div>
+        {% endif %}
+        <div class="pf_im_hosting_title">
+            IM Hosting Packages
+        </div>
+        <div class="pf_im_hosting_packages">
+            <div>
+                <strong>Starter</strong>
+                <em>$5<span> / month</span></em>
+                <span>
+                    100 active connections
+                </span>
+                <a href="{{ callback }}" class="pf_im_hosting_pay">Pay</a>
+            </div>
+        </div>
+        <div class="pf_im_cancel">
+            <a href="{{ url('/im/no-hosting') }}" class="ajax">No thanks, I'll host it myself</a>
+        </div>
+    </div>
+    {% endif %}
+    <style>
+        .app_grouping {
+            display:block !important;
+        }
+    </style>
+{% endif %}

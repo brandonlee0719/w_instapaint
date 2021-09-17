@@ -1,0 +1,111 @@
+{
+    "id": "bootstrap",
+    "name": "Bootstrap",
+    "vars": {
+        "body_bg": {
+            "title": "Body Background",
+            "id": "body",
+            "attr": "background"
+        },
+        "color": {
+            "title": "Color",
+            "id": "body",
+            "attr": "color"
+        },
+        "link": {
+            "title": "Links",
+            "id": "a",
+            "attr": "color"
+        },
+        "link_hover": {
+            "title": "Links Hover",
+            "id": "a:hover",
+            "attr": "color"
+        },
+        "link_focus": {
+            "title": "Focused Links",
+            "id": "a.activity_feed_content_link_title, a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link, #content div.row_title_info h1 a.link:hover",
+            "attr": "color"
+        },
+        "link_focus_hover": {
+            "title": "Focused Links Hover",
+            "id": "a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link:hover",
+            "attr": "color"
+        },
+        "brand_primary_border": {
+            "title": "Primary Brand Border",
+            "id": "#js_block_border_core_menusub ul.action > li.active > a, #js_block_border_core_menusub ul.action > li.active > a:hover, #js_block_border_core_menusub ul.action > li.active > a:focus",
+            "attr": "border-color"
+        },
+        "header_bg": {
+            "title": "Header Background",
+            "id": ".sticky-bar, .navbar-header",
+            "attr": "background"
+        },
+        "content_bg": {
+            "title": "Content Background",
+            "id": "#content-stage",
+            "attr": "background"
+        },
+        "container_width": {
+            "title": "Container Width",
+            "id": ".container-fluid",
+            "attr": "max-width"
+        },
+        "nav_bar_bg": {
+            "title": "Navigation Background",
+            "id": ".navbar-default",
+            "attr": "background"
+        },
+        "form_bg": {
+            "title": "Form Input Background",
+            "id": ".form-control",
+            "attr": "background"
+        },
+        "form_color": {
+            "title": "Form Input Text Color",
+            "id": ".form-control",
+            "attr": "color"
+        },
+        "search_button_bg": {
+            "title": "Search Background",
+            "id": "#header_search_form span.form-control-feedback",
+            "attr": "background"
+        },
+        "search_button_color": {
+            "title": "Search Text Color",
+            "id": "#header_search_form span.form-control-feedback",
+            "attr": "color"
+        },
+        "block_bg": {
+            "title": "Block Background",
+            "id": ".block",
+            "attr": "background"
+        },
+        "block_color": {
+            "title": "Block Content Text Color",
+            "id": ".block .content, .block .content .extra_info",
+            "attr": "color"
+        },
+        "block_title_color": {
+            "title": "Block Title Text Color",
+            "id": ".block .title",
+            "attr": "color"
+        },
+        "block_title_border": {
+            "title": "Block Title Border",
+            "id": ".block .title",
+            "attr": "border-bottom-color"
+        },
+        "footer_bg": {
+            "title": "Footer Background",
+            "id": "footer, .footer-holder",
+            "attr": "background"
+        },
+        "footer_color": {
+            "title": "Footer Text Color",
+            "id": "footer, .footer-holder, .footer-holder a, .footer-holder a:hover",
+            "attr": "color"
+        }
+    }
+}

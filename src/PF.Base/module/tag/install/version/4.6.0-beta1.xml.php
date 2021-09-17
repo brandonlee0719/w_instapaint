@@ -1,0 +1,15 @@
+<upgrade>
+    <settings>
+		<setting>
+			<group>time_stamps</group>
+			<module_id>tag</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>enable_tag_support</var_name>
+			<phrase_var_name>setting_enable_tag_support</phrase_var_name>
+			<ordering>1</ordering>
+			<version_id>4.6.0</version_id>
+			<value>1</value>
+		</setting>
+    </settings>
+</upgrade>

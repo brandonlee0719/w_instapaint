@@ -1,0 +1,76 @@
+{
+    "id": "material",
+    "name": "Material",
+    "vars": {
+        "body-bg": {
+            "title": "Body Background",
+            "id": "body",
+            "attr": "background"
+        },
+        "links-color": {
+            "title": "Links",
+            "id": "a",
+            "attr": "color"
+        },
+        "links-color-hover": {
+            "title": "Links Hover",
+            "id": "a:hover",
+            "attr": "color"
+        },
+        "header-bg": {
+            "title": "Header Background ",
+            "id": ".sticky-bar",
+            "attr": "background"
+        },
+        "content-bg": {
+            "title": "Content Background ",
+            "id": "#main #content-stage, .js_feed_view_more_entry_holder .feed-stream-content, .js_feed_comment_border .feed-stream-content, .header-filter-holder, div.comment_mini_content_border",
+            "attr": "background"
+        },
+        "content-width": {
+            "title": "Content Width",
+            "id": ".container",
+            "attr": "width"
+        },
+        "nav-bg": {
+            "title": "Navigation Background",
+            "id": ".navbar.main-navigation",
+            "attr": "background"
+        },
+        "input-bg": {
+            "title": "Form Input Background",
+            "id": ".form-control, .js_box_holder .js_box .form-control, .js_box_holder .js_box input",
+            "attr": "background"
+        },
+        "input-color": {
+            "title": "Form Input Text Color",
+            "id": ".form-control, .js_box_holder .js_box .form-control, .js_box_holder .js_box input",
+            "attr": "color"
+        },
+        "block-bg": {
+            "title": "Block Background",
+            "id": "#main .layout-left .block, #main .layout-right .block",
+            "attr": "background"
+        },
+        "block-title-color": {
+            "title": "Block Title Text Color",
+            "id": "#main .layout-left .block > .title, #main .layout-right .block > .title",
+            "attr": "color"
+        },
+        "block-border-color": {
+            "title": "Block Title Border Color",
+            "id": "#main .layout-left .block > .content, #main .layout-right .block > .content",
+            "attr": "border-color"
+        },
+        "footer-bg": {
+            "title": "Footer Background",
+            "id": "#section-footer",
+            "attr": "background"
+        },
+        "footer-color": {
+            "title": "Footer Text Color",
+            "id": "#section-footer .footer-holder .copyright",
+            "attr": "color"
+        }
+    }
+}

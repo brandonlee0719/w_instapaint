@@ -1,0 +1,14 @@
+<phpfox_update_user_group_settings>
+    <setting>
+        <is_admin_setting>0</is_admin_setting>
+        <module_id>friend</module_id>
+        <type>boolean</type>
+        <admin>true</admin>
+        <user>true</user>
+        <guest>false</guest>
+        <staff>true</staff>
+        <module>friend</module>
+        <ordering>0</ordering>
+        <value>link_to_remove_friend_on_profile</value>
+    </setting>
+</phpfox_update_user_group_settings>

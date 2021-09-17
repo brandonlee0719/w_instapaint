@@ -1,0 +1,235 @@
+
+#js_block_border__apps_phpfox_shoutbox_block_chat {
+  padding: 0 !important;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .content {
+  padding: 0 !important;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .content .panel-footer {
+  padding: 10px;
+  border-bottom: #ccc solid 1px;
+  border-top: #ccc solid 1px;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .no_image_user {
+  width: 40px;
+  height: 40px;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .no_image_user span {
+  font-size: 13px;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat ._image__50_square {
+  height: 40px;
+  width: 40px;
+}
+
+.messages_body {
+  width: 100%;
+}
+
+/*End my*/
+#js_block_border__apps_phpfox_shoutbox_block_chat .col-md-2, #js_block_border__apps_phpfox_shoutbox_block_chat .col-md-10 {
+  padding: 0;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .panel {
+  margin-bottom: 0;
+}
+
+.chat-window {
+  bottom: 0;
+  position: fixed;
+  float: right;
+  margin-left: 10px;
+}
+
+.chat-window > div > .panel {
+  border-radius: 5px 5px 0 0;
+}
+
+.icon_minim {
+  padding: 2px 10px;
+}
+
+.msg_container_base {
+  margin: 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-x: hidden;
+  min-height: 400px;
+}
+
+.top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.msg_receive {
+  background: #f1f5f8;
+  padding-left: 0;
+}
+
+.msg_sent {
+  background: @sent_bg;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .messages {
+  max-width: 100%;
+  margin-top: 7px;
+  display: inline-block;
+  min-width: 50px;
+
+  > p {
+    color: #555555;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+.messages > span {
+  font-size: 11px;
+}
+
+.msg_container {
+  padding: 10px 0;
+  overflow: hidden;
+  margin: auto;
+  border-bottom: solid 1px rgb(238, 238, 238);
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat img {
+  display: block;
+  width: 100%;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .avatar {
+  position: relative;
+  width: 40px;
+}
+
+.messages_body .messages:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: block;
+  transform: rotate(45deg);
+  position: relative;
+  top: -4px;
+  right: -7px;
+  border-right: 0;
+  border-bottom: 0;
+}
+[dir="rtl"] .messages_body .messages:before {
+  top: -4px;
+  right: 15px;
+}
+.messages_body .msg_receive:before {
+  background-color: @received_bg;
+}
+
+.base_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.messages_body .msg_sent:before {
+  background-color: @sent_bg;
+}
+
+.msg_sent > time {
+  float: right;
+}
+
+.msg_container_base::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #EDD6C7;
+}
+
+.msg_container_base::-webkit-scrollbar {
+  width: 6px;
+  background-color: #EDD6C7;
+}
+
+.msg_container_base::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+.base_receive .messages_body .close {
+  font-size: 13px;
+  margin: 3px;
+}
+
+.base_sent .messages_body .close {
+  font-size: 13px;
+  margin: 3px 10px;
+}
+
+#shoutbox_loading_new {
+  text-align: center;
+  width: 100%;
+}
+
+#shoutbox_loading_new hr {
+  border: solid 1px dimgrey !important;
+  width: 50%;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .msg_container_row {
+  padding: 0px 20px;
+
+  &:hover {
+    > button.close {
+      display: block;
+    }
+  }
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .msg_container_row button {
+  font-size: 14px;
+  &.close {
+    display: none;
+  }
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .title_avatar {
+  display: inline-flex;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat .title_fullname {
+  padding-left: 10px;
+
+  > a {
+    font-weight: bold;
+  }
+
+  .message_convert_time {
+    font-style: normal;
+  }
+}
+
+[dir="rtl"] #js_block_border__apps_phpfox_shoutbox_block_chat .title_fullname {
+  padding-right: 10px;
+}
+
+#js_block_border__apps_phpfox_shoutbox_block_chat div.title {
+  margin-left: 20px;
+}
+
+[dir="rtl"] #js_block_border__apps_phpfox_shoutbox_block_chat div.title {
+  margin-right: 20px;
+
+}
+[dir="rtl"] .fa-arrow-right:before {
+   content: "\f060";
+}

@@ -1,0 +1,16 @@
+<upgrade>
+	<user_group_settings>
+		<setting>
+			<is_admin_setting>0</is_admin_setting>
+			<module_id>feed</module_id>
+			<type>boolean</type>
+			<admin>false</admin>
+			<user>false</user>
+			<guest>false</guest>
+			<staff>false</staff>
+			<module>feed</module>
+			<ordering>0</ordering>
+			<value>can_purchase_sponsor</value>
+		</setting>
+	</user_group_settings>
+</upgrade>

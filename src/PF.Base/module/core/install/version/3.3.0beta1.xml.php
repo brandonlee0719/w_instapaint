@@ -1,0 +1,59 @@
+<upgrade>
+	<settings>
+		<setting>
+			<group>search_engine_optimization</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>boolean</type>
+			<var_name>no_follow_on_external_links</var_name>
+			<phrase_var_name>setting_no_follow_on_external_links</phrase_var_name>
+			<ordering>7</ordering>
+			<version_id>3.3.0beta1</version_id>
+			<value>0</value>
+		</setting>
+		<setting>
+			<group>cdn_content_delivery_network</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>string</type>
+			<var_name>rackspace_username</var_name>
+			<phrase_var_name>setting_rackspace_username</phrase_var_name>
+			<ordering>11</ordering>
+			<version_id>3.3.0beta1</version_id>
+			<value />
+		</setting>
+		<setting>
+			<group>cdn_content_delivery_network</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>string</type>
+			<var_name>rackspace_key</var_name>
+			<phrase_var_name>setting_rackspace_key</phrase_var_name>
+			<ordering>12</ordering>
+			<version_id>3.3.0beta1</version_id>
+			<value />
+		</setting>
+		<setting>
+			<group>cdn_content_delivery_network</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>string</type>
+			<var_name>rackspace_container</var_name>
+			<phrase_var_name>setting_rackspace_container</phrase_var_name>
+			<ordering>13</ordering>
+			<version_id>3.3.0beta1</version_id>
+			<value />
+		</setting>
+		<setting>
+			<group>cdn_content_delivery_network</group>
+			<module_id>core</module_id>
+			<is_hidden>0</is_hidden>
+			<type>string</type>
+			<var_name>rackspace_url</var_name>
+			<phrase_var_name>setting_rackspace_url</phrase_var_name>
+			<ordering>14</ordering>
+			<version_id>3.3.0beta1</version_id>
+			<value />
+		</setting>
+	</settings>
+</upgrade>

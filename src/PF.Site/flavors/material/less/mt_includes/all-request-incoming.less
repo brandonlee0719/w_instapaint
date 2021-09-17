@@ -1,0 +1,193 @@
+/*========================================
+=            Incoming request            =
+========================================*/
+.item-container-friends-incoming{
+	.friend-incoming-item{
+		margin: 0 -@grid-point*2;
+		.pr-2;
+		.pl-8;
+		@media screen and (max-width: 480px){
+			.pl-6;
+		}
+		position: relative;
+        -webkit-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+
+        &.friend-request-accepted {
+            background-color: @alert-success-bg;
+            &:hover {
+                background-color: @alert-success-bg;
+            }
+            .item-info {
+                color: @alert-success-text !important;
+            }
+        }
+		.moderation_row{
+			position: absolute;
+			top: 50%;
+			.l-0;
+			transform: translateY(-50%);
+		}
+		&:first-child{
+			.item-outer{
+				border-top: none;
+			}
+		}
+		&:last-child{
+			.item-outer{
+				border-bottom:1px solid @border-color-light;
+			}
+		}
+		&.is_new{
+			background: lighten(@brand-primary,45%) !important;
+		}
+		&:hover,&.active{
+			.item-outer{
+				border-color: @border-color;
+				.item-inner{
+					.item-title{
+						.user_profile_link_span{
+							a{
+								color: @brand-primary-dark !important;
+							}
+						}
+					}
+				}
+			}
+			
+			& + .friend-incoming-item{
+				.item-outer{
+					border-top-color: @border-color;
+				}
+			}
+			@media (min-width:@screen-md-min){
+				background: @gray-lightest;
+			}
+			.js_hover_info, 
+			.img-wrapper{
+				&:before{
+					border: 1px solid @brand-primary-dark;
+				}
+			}
+			.img-wrapper,
+			.no_image_user{
+				box-shadow: 0px 6px 12px 0px rgba(38, 129, 213, 0.4);
+			}
+		}
+		.item-outer{
+			display: flex;
+			align-items:center;
+			.py-2;
+			border-top: 1px solid @border-color-light;
+			.item-media-src{
+				min-width: @grid-point*7;
+				@media screen and (max-width: 480px){
+					min-width: @grid-point*4;
+				}
+				.no_image_user,.img-wrapper {
+					.s-7;
+					@media screen and (max-width: 480px){
+						.s-4;
+						& > span{
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			.item-inner{
+				flex:1;
+				min-width: 0;
+				position: relative;
+				padding-right: 230px;
+				@media screen and (max-width: 480px){
+					padding-right: 100px;
+					html[dir='rtl'] &{
+						padding-right: 0 !important;
+						padding-left: 100px !important;
+					}
+				}
+				html[dir='rtl'] &{
+					padding-right: 0;
+					padding-left: 230px;
+				}
+				.ml-2;
+				.item-title{
+					.user_profile_link_span{
+						a{
+							font-weight: bold !important;
+							.fz-lh(14px);
+							color: @brand-primary !important;
+							.transition(all 300ms ease);
+							.truncate-1();
+							&:hover{
+								color: @brand-primary-dark !important;
+							}
+						}
+					}
+				}
+				.item-info{
+					.fz-lh(12px);
+					color:@gray-dark;
+					.truncate-1();
+					a{
+						color: @text-color !important;
+						html[dir='rtl'] &{
+							display: inline-block;
+						}
+					}
+				}
+				.drop_data_content{
+					position: absolute;
+					top:-@grid-point;
+					.r-0;
+					.drop_data_user{
+						& > .dropdown{
+							&.open{
+				                a.btn{
+				                    background: @brand-primary-lightest;
+				                    color: @brand-primary-dark;
+				                    border-color: @brand-primary-lighter !important;
+				                }
+				            }
+						}
+					}
+					.drop_data_action{
+						.table_clear_button{
+							li{
+								margin: 0;
+								.ml-1;
+							}
+							@media screen and (max-width: 480px){
+								flex-direction:column;
+								align-items:center;
+								margin-top: -@grid-point;
+								li{
+									a{
+										.btn-xs;
+										.btn.btn-round;
+									}
+									&:first-child{
+										margin-bottom: @grid-point/2;
+									}
+								}
+							}
+						}
+					}
+					.caret{
+						.ml-1;
+					}
+				}
+			}
+		}
+	}
+}
+#page_friend_accept{
+	._block_top{
+	    height: 56px;
+	    margin-top: -16px;
+	    padding-top: 12px;
+	}
+}
+
+/*=====  End of Incoming request  ======*/
